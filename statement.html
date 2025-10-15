@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio | Academic Statement</title>
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      background: #f9f9f9;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+      margin: auto;
+      max-width: 1100px;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #00aaff;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      transition: 0.3s;
+    }
+
+    /* Intro Section */
+    .statement-intro {
+      background: linear-gradient(to right, #e3f2fd, #f9f9f9);
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+
+    .statement-intro h1 {
+      font-size: 2.8rem;
+      color: #1a1a1a;
+      margin-bottom: 1.5rem;
+    }
+
+    .statement-intro h1 span {
+      color: #00aaff;
+    }
+
+    .statement-intro p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.15rem;
+      color: #444;
+    }
+
+    /* Statement Content */
+    .statement-content {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.8;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 3rem 2rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #1a1a1a;
+      color: #ccc;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      margin-top: 3rem;
+    }
+
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+
+    footer a {
+      color: #00aaff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .statement-content {
+        padding: 2rem 1.5rem;
+      }
+
+      .statement-intro h1 {
+        font-size: 2.2rem;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #1a1a1a;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h2 class="logo">Brady Merten</h2>
+      <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="statement.html" class="active">Academic Statement</a></li>
+        <li><a href="portfolio.html">Portfolio of Work</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact Information</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Intro Section -->
+  <section class="statement-intro">
+    <h1>My <span>Academic Statement</span></h1>
+    <p>A reflection of my learning journey, goals, and how I aim to grow through my academic and professional experiences.</p>
+  </section>
+
+  <!-- Statement Content -->
+  <section class="statement-content">
+    <p>
+Since a young age I wanted to become an engineer, and currently I want to pursue mechanical engineering. Earlier this year I competed at TSA Nationals for Webmaster event where we were tasked with creating a vegetarian website, and ultimately ended up placing 6th. This experience made me realize that I no longer want to focus on computer science and instead want to pursue a broader field that I have a lot of experience in. Throughout my life I have completed many projects related to mechanical engineering. Whether it was robotics, design, or 3D printing. Mechanical engineering just gives me a wide range of opportunities that no other engineering major offers. Currently I am still in TSA but competing in several new events that are related to mechanical engineering, with the goal of further developing my STEM and engineering skills to prepare me for college, and lead me to my ultimate goal of design and creating cars.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Brady Merten — All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio | About Me</title>
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      background: #f9f9f9;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+      margin: auto;
+      max-width: 1100px;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #00aaff;
+    }
+
+    /* Hamburger */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .hamburger div {
+      width: 25px;
+      height: 3px;
+      background: white;
+      transition: 0.3s;
+    }
+
+    /* Introduction (Hero-style) */
+    .about-intro {
+      background: linear-gradient(to right, #e3f2fd, #f9f9f9);
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+
+    .about-intro h1 {
+      font-size: 2.8rem;
+      color: #1a1a1a;
+      margin-bottom: 1.5rem;
+    }
+
+    .about-intro h1 span {
+      color: #00aaff;
+    }
+
+    .about-intro p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.15rem;
+      color: #444;
+    }
+
+    /* Main Paragraph Section */
+    .about-main-text {
+      max-width: 900px;
+      margin: 4rem auto;
+      padding: 0 2rem;
+      font-size: 1.1rem;
+      color: #444;
+      line-height: 1.8;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 3rem 2rem;
+    }
+
+    /* About Content Sections */
+    .about-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 3rem;
+      padding: 5rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .about-section:nth-child(even) {
+      flex-direction: row-reverse;
+      background: #f0f8ff;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .about-text h2 {
+      color: #00aaff;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-text p {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .about-img {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .about-img img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      object-fit: cover;
+    }
+
+    /* Footer */
+    footer {
+      background: #1a1a1a;
+      color: #ccc;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      margin-top: 3rem;
+    }
+
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+
+    footer .socials {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    footer a {
+      color: #00aaff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-img img {
+        max-width: 300px;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #1a1a1a;
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+        padding: 1rem 0;
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h2 class="logo">Brady Merten</h2>
+      <div class="hamburger" id="hamburger">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Me</a></li>
+        <li><a href="statement.html">Academic Statement</a></li>
+        <li><a href="portfolio.html">Portfolio of Work</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact Information</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Introduction -->
+  <section class="about-intro">
+    <h1>Get to Know <span>Me</span></h1>
+    <p>Here is a small glimse into my life inside and outside of my academic and technical life.</p>
+  </section>
+
+  <!-- Main Paragraph Section -->
+  <section class="about-main-text">
+    <p>
+      I am a hard working, dedicated person who was born and raised in Louisville Kentucky. I do track and cross country for my school, as well as play soccer and a few sports on the side. During the summers I enjoy traveling whether it is across state lines or internationally, I still enjoy the change of scenery. Additionally I am an outgoing person who enjoys trying to understand and imagine how things work which has left me spending the time when I'm not playing sports or traveling designing, creating projects whether it is a website or a 3d print. Ultimately all of my travels and hobbies have shaped me into an adventurous, and quandering person.
+    </p>
+  </section>
+
+  <!-- Sports Section -->
+  <section class="about-section">
+    <div class="about-text">
+      <h2>Sports</h2>
+      <p> my life I have played many diffrent sports, early on I started by playing baseball, socceer, basektball but ulaimlty fell in love with soccer which led me to play from the age of 3 - 16 for both my school and club, before last year I transitioned to cross country and track</p>
+      </div>
+    <div class="about-img">
+      <img src="soccer.JPG" alt="Brady playing soccer or running">
+    </div>
+  </section>
+
+  <!-- Technology Section -->
+  <section class="about-section">
+    <div class="about-text">
+      <h2> Engineering</h2>
+      <p>Throughout my life I have always loved designing and building things whether it was Legos, robotics, or other projects. But I really feel in love with it when I started doing robotics in elementary school which continued through middle school, which helped me develop a passion for engineering. During highschool I have cotniued to grow on that by TSA competitions and hope to pesrue a carrer in mechanical engineering.</p>
+    </div>
+    <div class="about-img">
+      <img src="web.jpg" alt="Brady working on a computer project">
+    </div>
+  </section>
+
+  <!-- Creativity Section -->
+  <section class="about-section">
+    <div class="about-text">
+      <h2>Travel</h2>
+      <p>Throughout my life, I have always enjoyed traveling, whether it’s an hour down the road to go on a hike, to another state, or even another country. Traveling has exposed me to experiences I don’t encounter in my everyday life, from new landscapes to local traditions it has exposed me to new ways of thinking and problem solving, and given me new ideas to think about and try to adress.</p>
+    </div>
+    <div class="about-img">
+      <img src="trip.jpeg" alt="Creative design or art concept">
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Brady Merten — All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('active');
+      hamburger.classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

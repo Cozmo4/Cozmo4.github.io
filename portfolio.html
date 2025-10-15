@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Portfolio | Portfolio of Work</title>
+  <style>
+    /* Reset & Base */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #333;
+      background: #f9f9f9;
+      line-height: 1.6;
+    }
+
+    /* Navbar */
+    header {
+      background: #1a1a1a;
+      color: #fff;
+      padding: 1rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 90%;
+      margin: auto;
+      max-width: 1100px;
+      position: relative;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: #00aaff;
+    }
+
+    /* Hamburger Menu */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      gap: 5px;
+    }
+
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      border-radius: 2px;
+    }
+
+    /* Portfolio Intro */
+    .portfolio-intro {
+      background: linear-gradient(to right, #e3f2fd, #f9f9f9);
+      text-align: center;
+      padding: 6rem 2rem;
+    }
+
+    .portfolio-intro h1 {
+      font-size: 2.8rem;
+      color: #1a1a1a;
+      margin-bottom: 1.5rem;
+    }
+
+    .portfolio-intro h1 span {
+      color: #00aaff;
+    }
+
+    .portfolio-intro p {
+      max-width: 700px;
+      margin: 0 auto;
+      font-size: 1.15rem;
+      color: #444;
+    }
+
+    /* Projects Grid - Vertical Layout */
+    .projects-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 0 2rem;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .project-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .project-card img, .project-card iframe {
+      width: 100%;
+      height: 450px;
+      border-radius: 8px;
+      margin-bottom: 1.2rem;
+      object-fit: cover;
+    }
+
+    .project-card iframe {
+      border: 1px solid #ccc;
+    }
+
+    .project-card h3 {
+      color: #00aaff;
+      font-size: 1.8rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .project-card p {
+      font-size: 1.05rem;
+      color: #444;
+      overflow-y: auto;
+    }
+
+    /* Footer */
+    footer {
+      background: #1a1a1a;
+      color: #ccc;
+      text-align: center;
+      padding: 2.5rem 1rem;
+      margin-top: 3rem;
+    }
+
+    footer a {
+      color: #00aaff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .portfolio-intro h1 {
+        font-size: 2.2rem;
+      }
+
+      .portfolio-intro p {
+        font-size: 1rem;
+      }
+
+      .project-card img, .project-card iframe {
+        height: 350px;
+      }
+
+      .project-card h3 {
+        font-size: 1.5rem;
+      }
+
+      .project-card p {
+        font-size: 1rem;
+      }
+
+      /* Mobile Navbar */
+      .hamburger {
+        display: flex;
+      }
+
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background: #1a1a1a;
+        flex-direction: column;
+        width: 100%;
+        display: none;
+        padding: 1rem 0;
+      }
+
+      .nav-links.show {
+        display: flex;
+      }
+
+      .nav-links li {
+        text-align: center;
+        padding: 0.8rem 0;
+      }
+
+      .nav-links a {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <h2 class="logo">Brady Merten</h2>
+
+      <div class="hamburger" id="hamburger">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="statement.html">Academic Statement</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio of Work</a></li>
+        <li><a href="resume.html">Resume</a></li>
+        <li><a href="contact.html">Contact Information</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Portfolio Intro -->
+  <section class="portfolio-intro">
+    <h1>My <span>Projects</span></h1>
+    <p>Here’s a collection of projects that showcase my skills over the last couple of years. </p>
+  </section>
+
+  <!-- Projects Grid -->
+  <section class="projects-grid">
+    <div class="project-card">
+      <iframe src="home.pdf" frameborder="0"></iframe>
+      <h3>Writting example</h3>
+      <p>This writting is example of not only to show off how my writting skills developing overtime, but also me adressing problem that so little attentionir brought to throuhgout are comunity in order to try and create change.</p>
+    </div>
+
+    <div class="project-card">
+      <iframe src="science1.pdf" frameborder="0"></iframe>
+      <h3>Science Fair, enchaning website efficeny</h3>
+      <p>This is my science fair project where I coded several automated scripts for my website to determine if it was better if a human or an automated scripts do a certian task for updating a website</p>
+    </div>
+
+    <div class="project-card">
+      <iframe src="science2.pdf" frameborder="0"></iframe>
+      <h3>Science fair, long term hearing loss</h3>
+      <p>This project was designed and tested by me and was meant to determine if going to a college football game could cause long term hearing loss</p>
+    </div>
+
+    <div class="project-card">
+      <iframe src="lang.pdf" frameborder="0"></iframe>
+      <h3>Ap lang, Sporting events effect</h3>
+      <p>This was a full on research project, that used sources and data from over 10 major sporting events over the past 50 years to determine if countries should host major sporting events</p>
+    </div>
+
+    <div class="project-card">
+      <iframe src="science3.pdf" frameborder="0"></iframe>
+      <h3>Scinece Fair, gear ratio</h3>
+      <p>I designed and created a wind turbine using a 3dprinter and then tested 3 diffrent forms of gear ratios on diffrent speeds to determine which gear ratios are best for each wind speed.</p>
+    </div>  
+
+    <div class="project-card">
+      <img src="orgin.png" alt="Project 6 Screenshot">
+      <h3>Webmaster</h3>
+      <p>I designed and created a vegeatirain restaruant website to compete in regional, state, national competeion in which we placed 6th nationally.</p>
+    </div>
+
+    <div class="project-card">
+      <img src="scram.png" alt="Project 6 Screenshot">
+      <h3>Word Scrambler</h3>
+      <p>I created a web appliacation that scrambles words, and then you guess which word that is</p>
+    </div>
+
+    <div class="project-card">
+      <img src="blue.png" alt="Project 6 Screenshot">
+      <h3>Blue print builder</h3>
+      <p>I created a wep application where people are able to create the floor layout for there houses, apartmenets, etc</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Brady Merten — All Rights Reserved</p>
+    <p>Designed & coded by Brady Merten</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('nav-links');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+</body>
+</html>
