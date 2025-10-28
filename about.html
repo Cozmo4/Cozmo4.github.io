@@ -17,17 +17,20 @@
       color: #333;
       background: #f9f9f9;
       line-height: 1.6;
+      font-size: 1vw;
     }
+
+    main { flex: 1; }
 
     /* Navbar */
     header {
       background: #1a1a1a;
       color: #fff;
-      padding: 1rem 0;
+      padding: 1.5vh 0;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0.3vh 1vh rgba(0,0,0,0.3);
     }
 
     nav {
@@ -36,78 +39,64 @@
       justify-content: space-between;
       width: 90%;
       margin: auto;
-      max-width: 1100px;
       position: relative;
     }
 
-    .logo {
-      font-size: 1.5rem;
-      letter-spacing: 1px;
-    }
+    .logo { font-size: 2vw; letter-spacing: 0.1vw; }
 
     .nav-links {
       list-style: none;
       display: flex;
-      gap: 1.2rem;
+      gap: 2vw;
     }
 
     .nav-links a {
       color: white;
       text-decoration: none;
       font-weight: 500;
+      font-size: 1.2vw;
       transition: color 0.3s;
     }
 
     .nav-links a:hover,
-    .nav-links a.active {
-      color: #00aaff;
-    }
+    .nav-links a.active { color: #00aaff; }
 
-    /* Hamburger */
     .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
-      gap: 5px;
+      gap: 0.6vh;
     }
 
     .hamburger div {
-      width: 25px;
-      height: 3px;
+      width: 2.3vw;
+      height: 0.4vh;
       background: white;
       transition: 0.3s;
     }
 
     /* Main Paragraph Section (Intro + Text) */
     .about-main-text {
-      max-width: 900px;
-      margin: 5rem auto;
-      padding: 4rem 3rem;
-      font-size: 1.3rem;
+      margin: 5vh 15%;
+      padding: 3%;
+      font-size: 1.1vw;
       color: #444;
-      line-height: 1.8;
+      line-height: 2;
       background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 1.5vw;
+      box-shadow: 0 0.4vh 1.2vh rgba(0,0,0,0.1);
       text-align: center;
     }
 
     .about-main-text h1 {
-      font-size: 2.5rem;
+      font-size: 2.5vw;
       color: #1a1a1a;
-      margin-bottom: 1rem;
+      margin-bottom: 2vh;
     }
 
-    .about-main-text h1 span {
-      color: #00aaff;
-    }
+    .about-main-text h1 span { color: #00aaff; }
 
-    .about-main-text p {
-      max-width: 800px;
-      margin: 0.8rem auto;
-      font-size: 1.1rem;
-      color: #444;
-    }
+    .about-main-text p { font-size: 1.1vw; }
 
     /* About Content Sections */
     .about-section {
@@ -115,16 +104,12 @@
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 3rem;
-      padding: 2rem 2rem;
-      max-width: 1100px;
-      margin: auto;
+      gap: 3vh;
+      margin: 5vh 15%;
+      padding: 2vh 0;
     }
 
-    .about-section:nth-child(even) {
-      flex-direction: row-reverse;
-      background: #f0f8ff;
-    }
+    .about-section:nth-child(even) { flex-direction: row-reverse; background: #f0f8ff; }
 
     .about-text {
       flex: 1;
@@ -133,14 +118,11 @@
 
     .about-text h2 {
       color: #00aaff;
-      font-size: 2rem;
-      margin-bottom: 1rem;
+      font-size: 2vw;
+      margin-bottom: 1vh;
     }
 
-    .about-text p {
-      font-size: 1.25rem;
-      color: #444;
-    }
+    .about-text p { font-size: 1.05vw; }
 
     .about-img {
       flex: 1;
@@ -150,16 +132,15 @@
 
     .about-img img {
       width: 100%;
-      max-width: 400px;
-      border-radius: 12px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      border-radius: 1.2vw;
+      box-shadow: 0 0.4vh 1.2vh rgba(0,0,0,0.1);
       object-fit: cover;
     }
 
     .caption {
-      font-size: 0.95rem;
+      font-size: 0.9vw;
       color: #666;
-      margin-top: 0.6rem;
+      margin-top: 0.6vh;
       font-style: italic;
     }
 
@@ -168,19 +149,8 @@
       background: #1a1a1a;
       color: #ccc;
       text-align: center;
-      padding: 2.5rem 1rem;
-      margin-top: 3rem;
-    }
-
-    footer p {
-      margin-bottom: 0.5rem;
-    }
-
-    footer .socials {
-      margin-top: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
+      padding: 2.5vh 0;
+      margin-top: 3vh;
     }
 
     footer a {
@@ -190,25 +160,22 @@
       transition: color 0.3s;
     }
 
-    footer a:hover {
-      color: white;
-    }
+    footer a:hover { color: white; }
 
     /* Responsive */
+    @media (max-width: 1000px) {
+      .logo { font-size: 3.5vw; }
+      .nav-links a { font-size: 2.5vw; }
+      .about-main-text { margin: 4vh 10%; padding: 4%; }
+      .about-main-text h1 { font-size: 4vw; }
+      .about-main-text p { font-size: 2vw; }
+      .about-text h2 { font-size: 3vw; }
+      .about-text p { font-size: 2vw; }
+      .caption { font-size: 1.5vw; }
+    }
+
     @media (max-width: 768px) {
-      .about-section {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .about-img img {
-        max-width: 300px;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-
+      .hamburger { display: flex; }
       .nav-links {
         display: none;
         position: absolute;
@@ -218,24 +185,13 @@
         flex-direction: column;
         width: 100%;
         text-align: center;
-        padding: 1rem 0;
+        padding: 2vh 0;
       }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .nav-links li {
-        margin: 10px 0;
-      }
-
-      nav {
-        flex-wrap: wrap;
-      }
+      .nav-links.active { display: flex; }
+      .nav-links li { margin: 1vh 0; }
+      nav { flex-wrap: wrap; }
+      .about-section { flex-direction: column; }
     }
-
-    /* Large screens above 1600px */
-    /* Large screens above 1400px */
   </style>
 </head>
 <body>
@@ -262,7 +218,7 @@
   <section class="about-main-text">
     <h1>Get to Know <span>Me</span></h1>
     <p>
-      I am a hard working and dedicated person who was born and raised in Louisville Kentucky. Currrently I do run track and cross country, as well as play soccer and a few sports on the side. During the year I enjoy traveling either for sports or for vacation due to the change of senary. Additionally I am a person who trys to understand and imagine how things work which has left me spending the time when I'm not playing sports or traveling designing, creating projects whether it is a website or a 3d prints. Ultimately all of my travels and hobbies have shaped me into an an outgoing, adventures person.
+      I am a hard working and dedicated person who was born and raised in Louisville Kentucky. Currrently I do run track and cross country, as well as play soccer and a few sports on the side. During the year I enjoy traveling either for sports or for vacation due to the change of scenery. Additionally I am a person who tries to understand and imagine how things work which has left me spending the time when I'm not playing sports or traveling designing and creating projects, whether it is a website or 3D prints. Ultimately all of my travels and hobbies have shaped me into an outgoing, adventurous person.
     </p>
   </section>
 
@@ -285,7 +241,7 @@
     <div class="about-text">
       <h2>Engineering</h2>
       <p>
-        Throughout my life I have always loved designing and building things whether it was Legos, robot, or other projects. I really fell in love with it when I started doing robotics in elementary school and throughout middle school. During high school I continued to learn more about enginering from class and competing in TSA competitions and hope to pursue a career in mechanical engineering.
+        Throughout my life I have always loved designing and building things whether it was Legos, robots, or other projects. I really fell in love with it when I started doing robotics in elementary school and throughout middle school. During high school I continued to learn more about engineering from class and competing in TSA competitions and hope to pursue a career in mechanical engineering.
       </p>
     </div>
     <div class="about-img">
@@ -304,7 +260,7 @@
     </div>
     <div class="about-img">
       <img src="trip.jpeg" alt="Brady traveling or exploring">
-      <p class="caption">Carliforna vacation, 2022</p>
+      <p class="caption">California vacation, 2022</p>
     </div>
   </section>
 
@@ -320,4 +276,6 @@
       navLinks.classList.toggle('active');
       hamburger.classList.toggle('open');
     });
-  </
+  </script>
+</body>
+</html>
