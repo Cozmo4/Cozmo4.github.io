@@ -220,18 +220,13 @@ footer {
     margin: 0;
   }
 
-  /* Main content sections get 15% horizontal padding */
-  body > :not(header):not(footer) {
-    padding-left: 15%;
-    padding-right: 15%;
-  }
-
-  /* Contact sections scaling */
+  /* Contact sections centered with 15% margin on each side */
   .contact-section {
-    max-width: none;      /* remove max-width */
-    padding: 3.5rem 0;    /* vertical padding only, horizontal handled by 15% padding */
+    max-width: none;      /* allow full scaling */
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 3.5rem 2rem; /* vertical padding bigger, horizontal smaller */
     font-size: 1.25rem;   /* scale text */
-    margin: 4rem 0;
   }
 
   .contact-section h1 {
@@ -250,7 +245,7 @@ footer {
 
   input,
   textarea {
-    width: 100%;   /* full width within padding */
+    width: 100%;   /* full width within section */
     padding: 1rem;
     font-size: 1.1rem;
   }
@@ -269,6 +264,7 @@ footer {
     padding: 2rem 1rem;
   }
 }
+
 
 
 
