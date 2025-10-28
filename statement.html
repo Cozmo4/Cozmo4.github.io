@@ -12,12 +12,23 @@
       box-sizing: border-box;
     }
 
+    /* Make body a column flex container */
+    html, body {
+      height: 100%;
+    }
+
     body {
+      display: flex;
+      flex-direction: column;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #333;
       background: #f9f9f9;
       line-height: 1.6;
       font-size: 1.2vw; /* flexible font size for scaling */
+    }
+
+    main {
+      flex: 1; /* this allows the main content to grow and push footer down */
     }
 
     /* Navbar */
@@ -113,6 +124,7 @@
       text-align: center;
       padding: 3vh 5vw;
       font-size: 1vw;
+      margin-top: auto; /* pushes footer to bottom */
     }
 
     footer a {
@@ -202,7 +214,6 @@
   </style>
 </head>
 <body>
-
   <header>
     <nav>
       <h2 class="logo">Brady Merten</h2>
@@ -222,12 +233,14 @@
     </nav>
   </header>
 
-  <section class="statement-content">
-    <h1>My <span>Academic Statement</span></h1>
-    <p>
-      Currently my academic focus is on pursuing mechanical engineering, because of the wide variety of skills, and opportunities I will gain that no other engineering major offers. Throughout school I have 7 years of experience in which we competed in regional and national competitions. Over the past 2 years I have participated in TSA (technology student association) in which I have been able to create a vegetarian restaurant with my team and ultimately ended up placing 6th. Currently within TSA I am working on designing a marble maze to be mass produced as well as another website for our community. Through these organizations and projects I have been able to develop design, problem solving, and collaborative skills to allow me to complete hands-on engineering projects that have been preparing me with the engineering basics, ultimately leading me on a path to be able to design cleaner and more efficient cars, machines.
-    </p>
-  </section>
+  <main>
+    <section class="statement-content">
+      <h1>My <span>Academic Statement</span></h1>
+      <p>
+        Currently my academic focus is on pursuing mechanical engineering, because of the wide variety of skills, and opportunities I will gain that no other engineering major offers. Throughout school I have 7 years of experience in which we competed in regional and national competitions. Over the past 2 years I have participated in TSA (technology student association) in which I have been able to create a vegetarian restaurant with my team and ultimately ended up placing 6th. Currently within TSA I am working on designing a marble maze to be mass produced as well as another website for our community. Through these organizations and projects I have been able to develop design, problem solving, and collaborative skills to allow me to complete hands-on engineering projects that have been preparing me with the engineering basics, ultimately leading me on a path to be able to design cleaner and more efficient cars, machines.
+      </p>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Brady Merten — All Rights Reserved</p>
@@ -242,6 +255,5 @@
       hamburger.classList.toggle('open');
     });
   </script>
-
 </body>
 </html>
