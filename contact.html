@@ -212,51 +212,71 @@ footer {
 /* Large screens above 1600px */
 /* Large screens above 1400px */
 @media (min-width: 1400px) {
-  /* Contact sections centered with 15% margin on each side */
- .contact-section {
-  max-width: none;      /* allow full scaling */
-  margin-left: 20%;   /* centers with side space */
-  margin-right: 20%;
-  padding: 3.5rem 2rem; /* vertical padding larger, horizontal smaller */
-  font-size: 1.25rem;   /* scale text */
-}
-
+  /* Main contact sections centered with side space */
+  .contact-section {
+    max-width: none;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding: 4% 3%; /* % instead of rem for scalable spacing */
+    font-size: 1.25rem;
+  }
 
   .contact-section h1 {
-    font-size: 3rem;
-    margin-bottom: 1.5rem;
+    font-size: 3.43vw; /* was 3rem */
+    margin-bottom: 2%; /* scaled spacing */
   }
 
   .contact-section p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
+    font-size: 1.37vw; /* was 1.2rem */
+    margin-bottom: 3%; /* scaled spacing */
   }
 
   form {
-    gap: 1.5rem;
+    gap: 2.5%; /* scales with screen width */
+  }
+
+  label {
+    font-size: 1.1vw;
   }
 
   input,
   textarea {
     width: 100%;
-    padding: 1rem;
-    font-size: 1.1rem;
+    padding: 1.2% 1.5%; /* scales with screen */
+    font-size: 1.1vw;
   }
 
   button {
-    padding: 1.1rem;
-    font-size: 1.1rem;
+    padding: 1.5% 3%; /* scalable padding */
+    font-size: 1.2vw;
+    border-radius: 3%; /* proportional rounding */
   }
 
   .contact-info p {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+    font-size: 1.1vw;
+    margin-bottom: 1.5%;
   }
 
   footer {
-    padding: 2rem 1rem; /* small scale-up only */
+    padding: 2% 1%;
+    font-size: 1vw;
+  }
+
+  /* Navbar scaling */
+  nav {
+    width: 90%;
+    padding: 1.5% 0; /* scales navbar padding */
+  }
+
+  .nav-links a {
+    font-size: 1.1vw;
+  }
+
+  .logo {
+    font-size: 1.5vw;
   }
 }
+
 
 
 
