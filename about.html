@@ -237,18 +237,37 @@
 /* Large screens above 1600px */
 /* Large screens above 1600px */
 @media (min-width: 1400px) {
-  /* Nav and Footer stay 100% width */
-  
-
-  /* All other content inside body gets 15% side padding */
+  /* Apply 15% side padding to main content (everything except header/footer) */
   body > :not(header):not(footer) {
     padding-left: 15%;
     padding-right: 15%;
+    max-width: none;  /* remove any max-width */
+    width: auto;      /* ensure width can expand */
   }
 
-  /* Scale sections */
+  /* Nav and footer remain full width */
+  nav, footer {
+    width: 100%;
+    max-width: none;
+  }
+
+  /* About sections fully expand */
+  .about-main-text,
+  .about-section {
+    max-width: none;
+    width: 100%;
+  }
+
+  /* Scale images proportionally within their sections */
+  .about-img img {
+    max-width: 100%; /* remove fixed 400px cap */
+    width: 100%;
+  }
+
+  /* Contact section adjustments if applicable */
   .contact-section {
     max-width: none;
+    width: 100%;
     padding: 3.5rem 0; /* vertical padding only */
     font-size: 1.25rem;
     gap: 1.5rem;
@@ -283,7 +302,6 @@
     font-size: 1.1rem;
     margin-bottom: 1rem;
   }
-
 }
 
 
