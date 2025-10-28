@@ -209,6 +209,86 @@ footer {
     flex-wrap: wrap;
   }
 }
+/* Ultra-wide screens: 1500px and above */
+@media (min-width: 1500px) {
+  body {
+    font-size: 1.2vw; /* scales with viewport width */
+  }
+
+  header {
+    padding: 2vh 3%;
+  }
+
+  .logo {
+    font-size: 2.5vw;
+  }
+
+  .nav-links {
+    gap: 2.5%;
+  }
+
+  .nav-links a {
+    font-size: 1.5vw;
+  }
+
+  .hamburger div {
+    width: 2.5vw;
+    height: 0.6vh;
+  }
+
+  .contact-section {
+    width: 80%;
+    margin: 5vh auto;
+    padding: 4vh 4%;
+    border-radius: 1.2vw;
+    box-shadow: 0 0.6vh 2.5vh rgba(0, 0, 0, 0.15);
+  }
+
+  .contact-section h1 {
+    font-size: 4vw;
+    margin-bottom: 3vh;
+  }
+
+  .contact-section p {
+    font-size: 1.5vw;
+    margin-bottom: 4vh;
+  }
+
+  form {
+    gap: 3vh;
+  }
+
+  label {
+    font-size: 1.3vw;
+  }
+
+  input,
+  textarea {
+    padding: 2vh 1.5%;
+    font-size: 1.2vw;
+    border-radius: 1.2vw;
+  }
+
+  textarea {
+    min-height: 15vh;
+  }
+
+  button {
+    padding: 2vh 3%;
+    font-size: 1.5vw;
+    border-radius: 2.5vw;
+  }
+
+  footer {
+    padding: 3vh 0;
+    font-size: 1.2vw;
+  }
+
+  .contact-info p {
+    font-size: 1.4vw;
+    margin-bottom: 1.5vh;
+  }
+}
 
 
   </style>
