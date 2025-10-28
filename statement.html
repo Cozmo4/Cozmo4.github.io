@@ -172,6 +172,38 @@
         flex-wrap: wrap;
       }
     }
+    /* Large screens above 1400px */
+@media (min-width: 1400px) {
+  /* Nav and footer full width */
+  nav, footer {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+  }
+
+  /* Statement content centered with 15% margin on sides */
+  body > :not(header):not(footer) {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+
+  .statement-content {
+    max-width: none;       /* allow full scaling */
+    padding: 4rem 0;       /* vertical padding only */
+    font-size: 1.25rem;    /* scale text */
+  }
+
+  .statement-content h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  .statement-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: left;
+  }
+}
 
   </style>
 </head>
