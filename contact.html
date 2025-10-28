@@ -211,12 +211,30 @@ footer {
 }
 /* Ultra-wide screens: 1500px and above */
 @media (min-width: 1500px) {
-  body {
-    font-size: 1.2vw; /* scales with viewport width */
+
+  /* Remove any max-width or max-height restrictions */
+  * {
+    max-width: none !important;
+    max-height: none !important;
   }
 
+  /* Body scaling */
+  body {
+    font-size: 1.5vw; /* scales with viewport width */
+  }
+
+  /* Header & Nav */
   header {
     padding: 2vh 3%;
+  }
+
+  nav {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
   }
 
   .logo {
@@ -224,23 +242,24 @@ footer {
   }
 
   .nav-links {
-    gap: 2.5%;
+    display: flex !important;
+    gap: 2.5vw;
   }
 
   .nav-links a {
     font-size: 1.5vw;
   }
 
-  .hamburger div {
-    width: 2.5vw;
-    height: 0.6vh;
+  .hamburger {
+    display: none; /* full nav fits, hide hamburger */
   }
 
+  /* Contact Section */
   .contact-section {
-    width: 80%;
+    width: 80%; /* fluid width */
     margin: 5vh auto;
     padding: 4vh 4%;
-    border-radius: 1.2vw;
+    border-radius: 1vw;
     box-shadow: 0 0.6vh 2.5vh rgba(0, 0, 0, 0.15);
   }
 
@@ -249,12 +268,19 @@ footer {
     margin-bottom: 3vh;
   }
 
+  .contact-section h1 span {
+    font-size: 4vw;
+  }
+
   .contact-section p {
     font-size: 1.5vw;
     margin-bottom: 4vh;
   }
 
+  /* Form scaling */
   form {
+    display: flex;
+    flex-direction: column;
     gap: 3vh;
   }
 
@@ -264,9 +290,10 @@ footer {
 
   input,
   textarea {
+    width: 100%;
     padding: 2vh 1.5%;
     font-size: 1.2vw;
-    border-radius: 1.2vw;
+    border-radius: 1vw;
   }
 
   textarea {
@@ -277,16 +304,23 @@ footer {
     padding: 2vh 3%;
     font-size: 1.5vw;
     border-radius: 2.5vw;
+    align-self: center;
   }
 
-  footer {
-    padding: 3vh 0;
-    font-size: 1.2vw;
-  }
-
+  /* Contact info */
   .contact-info p {
     font-size: 1.4vw;
     margin-bottom: 1.5vh;
+  }
+
+  .contact-info a {
+    font-size: 1.4vw;
+  }
+
+  /* Footer */
+  footer {
+    padding: 3vh 0;
+    font-size: 1.2vw;
   }
 }
 
