@@ -20,12 +20,10 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      font-size: 1.2vw;
+      font-size: 1vw; /* decreased text size */
     }
 
-    main {
-      flex: 1; /* allows main content to grow and push footer down */
-    }
+    main { flex: 1; }
 
     /* Navbar */
     header {
@@ -47,10 +45,7 @@
       position: relative;
     }
 
-    .logo {
-      font-size: 2vw;
-      letter-spacing: 0.1vw;
-    }
+    .logo { font-size: 2vw; letter-spacing: 0.1vw; }
 
     .nav-links {
       list-style: none;
@@ -67,9 +62,7 @@
     }
 
     .nav-links a:hover,
-    .nav-links a.active {
-      color: #00aaff;
-    }
+    .nav-links a.active { color: #00aaff; }
 
     /* Hamburger */
     .hamburger {
@@ -89,7 +82,7 @@
     /* Statement Section */
     .statement-content {
       background: white;
-      margin: 5vh 20%;
+      margin: 5vh 25%; /* expanded margins */
       padding: 3%;
       border-radius: 1.5vw;
       box-shadow: 0 0.4vh 1.2vh rgba(0, 0, 0, 0.1);
@@ -97,22 +90,19 @@
     }
 
     .statement-content h1 {
-      font-size: 3vw;
+      font-size: 2.5vw; /* smaller heading */
       margin-bottom: 2vh;
       color: black;
     }
 
-    .statement-content h1 span {
-      color: #00aaff;
-    }
+    .statement-content h1 span { color: #00aaff; }
 
     .statement-content p {
-      font-size: 1.3vw;
+      font-size: 1.1vw; /* smaller paragraph */
       color: #444;
       line-height: 2;
     }
 
-    /* Footer */
     footer {
       background: #1a1a1a;
       color: white;
@@ -127,11 +117,11 @@
       .logo { font-size: 3.5vw; }
       .nav-links a { font-size: 2.5vw; }
       .statement-content {
-        margin: 4vh 10%;
+        margin: 4vh 15%; /* maintain 25% scaling roughly on smaller screens */
         padding: 5%;
       }
-      .statement-content h1 { font-size: 5vw; }
-      .statement-content p { font-size: 2.5vw; }
+      .statement-content h1 { font-size: 4.5vw; }
+      .statement-content p { font-size: 2vw; }
     }
 
     @media (max-width: 768px) {
