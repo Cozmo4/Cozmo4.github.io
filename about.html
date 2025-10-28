@@ -12,48 +12,43 @@
       box-sizing: border-box;
     }
 
-    html, body {
-      height: 100%;
-    }
-
     body {
-      display: flex;
-      flex-direction: column;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #333;
       background: #f9f9f9;
       line-height: 1.6;
-      font-size: 1.2vw;
     }
 
     /* Navbar */
     header {
       background: #1a1a1a;
       color: #fff;
-      padding: 2vh 5vw;
+      padding: 1rem 0;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 0.3vh 0.5vh rgba(0, 0, 0, 0.3);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
 
     nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 100%;
+      width: 90%;
+      margin: auto;
+      max-width: 1100px;
+      position: relative;
     }
 
     .logo {
-      font-size: 2vw;
-      letter-spacing: 0.1vw;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
     }
 
     .nav-links {
       list-style: none;
       display: flex;
-      gap: 2vw;
-      flex-wrap: wrap;
+      gap: 1.2rem;
     }
 
     .nav-links a {
@@ -61,7 +56,6 @@
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s;
-      font-size: 1.2vw;
     }
 
     .nav-links a:hover,
@@ -74,37 +68,34 @@
       display: none;
       flex-direction: column;
       cursor: pointer;
-      gap: 0.5vh;
+      gap: 5px;
     }
 
     .hamburger div {
-      width: 2.5vw;
-      height: 0.3vw;
+      width: 25px;
+      height: 3px;
       background: white;
       transition: 0.3s;
     }
 
-    /* Main Paragraph Section */
+    /* Main Paragraph Section (Intro + Text) */
     .about-main-text {
-      width: 80%;
-      margin: auto;
-      padding: 3.5vh 2.5vw;
-      font-size: 1.2vw;
-      line-height: 2;
+      max-width: 900px;
+      margin: 5rem auto;
+      padding: 4rem 3rem;
+      font-size: 1.3rem;
+      color: #444;
+      line-height: 1.8;
       background: #fff;
-      border-radius: 1vw;
-      box-shadow: 0 0.5vh 2vh rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       text-align: center;
-      flex: 1; /* push footer down */
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
     }
 
     .about-main-text h1 {
-      font-size: 3vw;
+      font-size: 2.5rem;
       color: #1a1a1a;
-      margin-bottom: 2vh;
+      margin-bottom: 1rem;
     }
 
     .about-main-text h1 span {
@@ -112,7 +103,9 @@
     }
 
     .about-main-text p {
-      font-size: 1.2vw;
+      max-width: 800px;
+      margin: 0.8rem auto;
+      font-size: 1.1rem;
       color: #444;
     }
 
@@ -123,9 +116,9 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 3rem;
-      padding: 2vh 2vw;
-      width: 90%;
-      margin: 0 auto;
+      padding: 2rem 2rem;
+      max-width: 1100px;
+      margin: auto;
     }
 
     .about-section:nth-child(even) {
@@ -140,12 +133,12 @@
 
     .about-text h2 {
       color: #00aaff;
-      font-size: 2vw;
-      margin-bottom: 1vh;
+      font-size: 2rem;
+      margin-bottom: 1rem;
     }
 
     .about-text p {
-      font-size: 1.1vw;
+      font-size: 1.25rem;
       color: #444;
     }
 
@@ -159,14 +152,14 @@
       width: 100%;
       max-width: 400px;
       border-radius: 12px;
-      box-shadow: 0 0.5vh 2vh rgba(0, 0, 0, 0.1);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       object-fit: cover;
     }
 
     .caption {
-      font-size: 0.95vw;
+      font-size: 0.95rem;
       color: #666;
-      margin-top: 0.6vh;
+      margin-top: 0.6rem;
       font-style: italic;
     }
 
@@ -175,8 +168,19 @@
       background: #1a1a1a;
       color: #ccc;
       text-align: center;
-      padding: 3vh 5vw;
-      font-size: 1vw;
+      padding: 2.5rem 1rem;
+      margin-top: 3rem;
+    }
+
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+
+    footer .socials {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
     }
 
     footer a {
@@ -191,51 +195,47 @@
     }
 
     /* Responsive */
-    @media (max-width: 1024px) {
-      body { font-size: 1.5vw; }
-      .logo { font-size: 3vw; }
+    @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-img img {
+        max-width: 300px;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
       .nav-links {
         display: none;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background: #1a1a1a;
         flex-direction: column;
         width: 100%;
         text-align: center;
-        gap: 2vh;
-        background: #1a1a1a;
-        position: absolute;
-        top: 7vh;
-        left: 0;
-        padding: 2vh 0;
+        padding: 1rem 0;
       }
-      .nav-links.active { display: flex; }
-      .hamburger { display: flex; }
-      .about-main-text { width: 90%; padding: 3vh 4vw; font-size: 1.5vw; }
-      .about-main-text h1 { font-size: 4vw; }
-      .about-main-text p { font-size: 1.5vw; }
-      .about-text h2 { font-size: 2.5vw; }
-      .about-text p { font-size: 1.5vw; }
-      .caption { font-size: 1vw; }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      nav {
+        flex-wrap: wrap;
+      }
     }
 
-    @media (max-width: 600px) {
-      body { font-size: 2.5vw; }
-      .logo { font-size: 4vw; }
-      .nav-links a { font-size: 3vw; }
-      .about-main-text { width: 95%; padding: 4vh 5vw; font-size: 2.5vw; }
-      .about-main-text h1 { font-size: 5vw; }
-      .about-main-text p { font-size: 2.5vw; }
-      .about-text h2 { font-size: 4vw; }
-      .about-text p { font-size: 2.5vw; }
-      .about-img img { max-width: 300px; }
-      .caption { font-size: 1.5vw; }
-    }
-
-  </style>
     /* Large screens above 1600px */
-/* Large screens above 1600px */
-/* Large screens above 1600px */
-/* Large screens above 1400px */
-
-
+    /* Large screens above 1400px */
   </style>
 </head>
 <body>
@@ -320,6 +320,4 @@
       navLinks.classList.toggle('active');
       hamburger.classList.toggle('open');
     });
-  </script>
-</body>
-</html>
+  </
