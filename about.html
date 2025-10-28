@@ -239,10 +239,11 @@
 /* Large screens above 1400px */
 @media (min-width: 1400px) {
   /* Main Intro Section */
-  .about-main-text {
-    width: 80%;          /* content width = 80% of screen */
-    margin: 5rem auto;   /* centers it */
-    padding: 3rem 2%;    /* inner padding */
+   .about-main-text {
+    width: 80%;          /* 80% of screen */
+    max-width: none;     /* remove the 900px limit */
+    margin: 5rem auto;   
+    padding: 3rem 2%;    
     font-size: 1.4rem;
     text-align: center;
   }
