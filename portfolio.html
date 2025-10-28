@@ -226,39 +226,27 @@
     /* Large screens above 1600px */
 /* Large screens above 1400px */
 /* Large screens above 1400px */
+    /* Large screens above 1400px */
 @media (min-width: 1400px) {
-  /* Nav and footer full width */
-  nav, footer {
-    width: 100%;
+  /* Keep nav and footer exactly as they are */
+  
+  /* Center main sections with 15% margins */
+  .portfolio-intro-box,
+  .projects-grid {
     max-width: none;
-    margin: 0;
-  }
-
-  /* All main content sections get 15% horizontal margin */
-  body > :not(header):not(footer) {
     margin-left: 15%;
     margin-right: 15%;
-  }
-
-  /* Intro box scaling */
-  .portfolio-intro-box {
-    max-width: none;
-    padding: 4rem 0; /* vertical padding only */
-    font-size: 1.3rem;
+    padding: 3.5rem 2rem;
+    font-size: 1.2rem;
   }
 
   .portfolio-intro-box h1 {
-    font-size: 3.2rem;
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
   }
 
   .portfolio-intro-box p {
-    font-size: 1.3rem;
-  }
-
-  /* Projects grid scaling */
-  .projects-grid {
-    max-width: none;
-    gap: 4rem;
+    font-size: 1.2rem;
   }
 
   .project-card {
@@ -273,21 +261,13 @@
     font-size: 1.15rem;
   }
 
-  /* Make PDFs & images responsive and maintain aspect ratio */
   .project-card img,
   .project-card iframe {
-    width: 100%;
-    aspect-ratio: 16 / 9; /* maintains proportional height */
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 1.2rem;
-    border: 1px solid #ccc; /* for PDFs */
-  }
-
-  footer {
-    padding: 3rem 1rem;
+    height: 500px;
   }
 }
+
+  
 
   </style>
 </head>
