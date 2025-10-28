@@ -239,9 +239,9 @@
 @media (min-width: 1400px) {
   /* Main Intro Section */
   .about-main-text {
-    width: 70%;          /* 100% - 15% - 15% */
+    width: 70%;          /* content width = 70% of screen */
     margin: 5rem auto;   /* centers it */
-    padding: 3rem 2%;    /* optional inner padding */
+    padding: 3rem 2%;    /* inner padding */
     font-size: 1.4rem;
     text-align: center;
   }
@@ -265,16 +265,25 @@
     gap: 3rem;
   }
 
-  /* Images scale to 60% and center */
+  /* Images scale to 70% and center */
   .about-img {
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* stack image + caption */
+    align-items: center;
+    text-align: center;
   }
 
   .about-img img {
-    max-width: 60%;
-    width: 60%;
+    width: 70%;
+    max-width: 70%;
     height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+  }
+
+  .about-img .caption {
+    margin-top: 0.5rem;
   }
 
   /* Text inside sections stays readable */
@@ -291,7 +300,6 @@
     font-size: 1.25rem;
   }
 }
-
 
 
 
