@@ -173,24 +173,20 @@
       }
     }
     /* Large screens above 1400px */
+/* Large screens above 1400px */
 @media (min-width: 1400px) {
-  /* Nav and footer full width */
-  nav, footer {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-  }
+  /* Keep nav and footer full width — no changes to them */
 
-  /* Statement content centered with 15% margin on sides */
-  body > :not(header):not(footer) {
-    margin-left: 15%;
-    margin-right: 15%;
-  }
-
+  /* Center the main content with 15% side margins */
   .statement-content {
-    max-width: none;       /* allow full scaling */
-    padding: 4rem 0;       /* vertical padding only */
-    font-size: 1.25rem;    /* scale text */
+    max-width: none;         /* allow it to stretch naturally */
+    margin-left: 15%;        /* keep centered */
+    margin-right: 15%;
+    padding: 4rem 0;         /* vertical padding only */
+    font-size: 1.25rem;      /* scale text */
+    background: #fff;        /* maintain white box */
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
 
   .statement-content h1 {
