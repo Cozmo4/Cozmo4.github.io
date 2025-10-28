@@ -210,37 +210,48 @@ footer {
   }
 }
 /* Large screens above 1600px */
+/* Large screens above 1600px */
 @media (min-width: 1400px) {
-  nav {
-    width: 95%;
-    max-width: none; /* remove max-width */
-    margin: auto;
+  /* Nav and footer full width */
+  nav, footer {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding-left: 5%; /* optional internal padding */
+    padding-right: 5%;
   }
 
+  /* Add 15% padding on main content sections */
+  body > :not(header):not(footer) {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  /* Scale contact sections */
   .contact-section {
-    max-width: none; /* allow sections to stretch */
-    padding: 3.5rem 4rem; /* scale up padding */
-    font-size: 1.25rem; /* scale text inside sections */
-    gap: 1.5rem; /* if there were gaps, scale them */
+    max-width: none;
+    padding: 3.5rem 0; /* vertical padding, horizontal handled by 15% */
+    font-size: 1.25rem;
+    gap: 1.5rem;
   }
 
   .contact-section h1 {
-    font-size: 3rem; /* scale headings */
+    font-size: 3rem;
     margin-bottom: 1.5rem;
   }
 
   .contact-section p {
-    font-size: 1.2rem; /* scale paragraphs */
+    font-size: 1.2rem;
     margin-bottom: 2.5rem;
   }
 
   form {
-    gap: 1.5rem; /* scale gaps between inputs */
+    gap: 1.5rem;
   }
 
   input,
   textarea {
-    padding: 1rem; /* scale input padding */
+    padding: 1rem;
     font-size: 1.1rem;
   }
 
@@ -250,12 +261,12 @@ footer {
   }
 
   .contact-info p {
-    font-size: 1.1rem; /* scale contact info */
+    font-size: 1.1rem;
     margin-bottom: 1rem;
   }
 
   footer {
-    padding: 2rem 1rem; /* scale footer padding */
+    padding: 2rem 1rem;
   }
 }
 
