@@ -237,18 +237,21 @@
 /* Large screens above 1600px */
 /* Large screens above 1600px */
 @media (min-width: 1400px) {
-  /* Apply 15% side padding to main content (everything except header/footer) */
+  /* Apply 15% side margins to main content (everything except header/footer) */
   body > :not(header):not(footer) {
-    padding-left: 15%;
-    padding-right: 15%;
+    margin-left: 15%;
+    margin-right: 15%;
     max-width: none;  /* remove any max-width */
-    width: auto;      /* ensure width can expand */
+    width: auto;      /* allow content to expand */
+    padding-left: 0;
+    padding-right: 0;
   }
 
-  /* Nav and footer remain full width */
+  /* Nav and footer stay full width */
   nav, footer {
     width: 100%;
     max-width: none;
+    margin: 0;
   }
 
   /* About sections fully expand */
@@ -258,10 +261,10 @@
     width: 100%;
   }
 
-  /* Scale images proportionally within their sections */
+  /* Images scale to 60% of their container */
   .about-img img {
-    max-width: 100%; /* remove fixed 400px cap */
-    width: 100%;
+    max-width: 60%;
+    width: 60%;
   }
 
   /* Contact section adjustments if applicable */
