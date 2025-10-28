@@ -175,16 +175,13 @@
     /* Large screens above 1400px */
 /* Large screens above 1400px */
 @media (min-width: 1400px) {
-  /* Keep nav and footer full width — no changes to them */
-
-  /* Center the main content with 15% side margins */
   .statement-content {
-    max-width: none;         /* allow it to stretch naturally */
-    margin-left: 15%;        /* keep centered */
-    margin-right: 15%;
-    padding: 4rem 0rem;         /* vertical padding only */
-    font-size: 1.25rem;      /* scale text */
-    background: #fff;        /* maintain white box */
+    max-width: none;         /* allow full stretch */
+    margin-left: 17.5%;      /* or adjust as desired */
+    margin-right: 17.5%;
+    padding: 4rem 2%;        /* small 2% padding inside */
+    font-size: 1.25rem;      /* larger text for big screens */
+    background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
@@ -195,8 +192,8 @@
   }
 
   .statement-content p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+    max-width: none;         /* let text use full width */
+    margin: 0;               /* remove extra centering */
     text-align: left;
   }
 }
