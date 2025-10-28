@@ -111,6 +111,7 @@
       gap: 3rem;
       flex-wrap: wrap;
       max-width: 1000px;
+      margin: auto;
     }
 
     .profile-img {
@@ -156,13 +157,13 @@
     }
 
     .btn:hover {
-      background: #00aaff;
       transform: scale(1.05);
     }
 
     /* Section Spacing */
     section {
       padding: 6rem 1rem;
+      width: 100%;
     }
 
     /* About Preview */
@@ -200,6 +201,8 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 2.5rem;
+      margin: auto;
+      max-width: 1000px;
     }
 
     .skill-card {
@@ -238,6 +241,8 @@
       justify-content: center;
       flex-wrap: wrap;
       gap: 2.5rem;
+      margin: auto;
+      max-width: 1000px;
     }
 
     .project {
@@ -303,29 +308,10 @@
       color: #ccc;
       text-align: center;
       padding: 2.5rem 1rem;
-      margin-top: 0;
     }
 
     footer p {
       margin-bottom: 0.5rem;
-    }
-
-    footer .socials {
-      margin-top: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-    }
-
-    footer a {
-      color: #00aaff;
-      text-decoration: none;
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-
-    footer a:hover {
-      color: white;
     }
 
     /* Responsive */
@@ -368,36 +354,33 @@
         flex-wrap: wrap;
       }
     }
+
     /* Large screens above 1200px */
-@media (min-width: 1201px) {
-  nav {
-    max-width: none;      /* remove max-width */
-    width: 90%;
-    margin: auto;
-  }
+    @media (min-width: 1201px) {
+      nav {
+        max-width: none;
+        width: 90%;
+        margin: auto;
+      }
 
-  .hero-content,
-  .about-preview,
-  .skills-grid,
-  .project-grid {
-    width: auto;
-    margin: 0 15%;        /* 15% padding on each side */
-  }
+      .hero-content,
+      .skills-grid,
+      .project-grid {
+        width: auto;
+        margin: 0 auto;
+        max-width: 1000px; /* keeps text centered and not sticking to the right */
+      }
 
-  .hero {
-    padding: 4rem 15%;
-  }
+      section {
+        padding: 6rem 15%; /* gives large-screen padding */
+      }
 
-  section {
-    padding: 6rem 15%;
-  }
-
-  .about-preview p,
-  .cta p {
-    max-width: none;      /* allow paragraph text to stretch naturally */
-  }
-}
-
+      .about-preview p,
+      .cta p {
+        max-width: 750px;
+        margin: 0 auto;
+      }
+    }
   </style>
 </head>
 <body>
@@ -437,7 +420,7 @@
   <!-- About Preview -->
   <section class="about-preview">
     <h2>About Me</h2>
-    <p>Hello I am Brady Merten, I have a passionate about web development, mechancial engineering, and robotics. Outside of school I enjoy playing sports, running cross country for my school</p>
+    <p>Hello I am Brady Merten, I have a passionate about web development, mechanical engineering, and robotics. Outside of school I enjoy playing sports, running cross country for my school.</p>
     <a href="about.html" class="btn">Learn More</a>
   </section>
 
@@ -450,16 +433,16 @@
         <p>I have experience using HTML, CSS, and JavaScript to create modern, responsive websites.</p>
       </div>
       <div class="skill-card">
-        <h3>Java development</h3>
-        <p>I have experince as a JAVA developer creating GUI for both personal use, as well as school proojects</p>
+        <h3>Java Development</h3>
+        <p>I have experience as a Java developer creating GUI for both personal use and school projects.</p>
       </div>
       <div class="skill-card">
         <h3>3D Printing & Prototyping</h3>
-        <p>Experienced in designing and printing 3D models in order to create functional projcets for science fair, or personal projects.</p>
+        <p>Experienced in designing and printing 3D models to create functional projects for science fairs or personal projects.</p>
       </div>
       <div class="skill-card">
-        <h3>Academic skills</h3>
-        <p>I have teamwork, time management, and perseverance skills gained through academics, sports as well as from projects.</p>
+        <h3>Academic Skills</h3>
+        <p>I have teamwork, time management, and perseverance skills gained through academics, sports, and projects.</p>
       </div>
     </div>
   </section>
@@ -470,15 +453,15 @@
     <div class="project-grid">
       <div class="project">
         <h3>Vegetarian restaurant website</h3>
-        <p>In a team we developed a fully responsive website vegeatirain restuaurant to compete at TSA regionals,states, and nationals.</p>
+        <p>In a team we developed a fully responsive vegetarian restaurant website to compete at TSA regionals, states, and nationals.</p>
       </div>
       <div class="project">
         <h3>Long term hearing loss study</h3>
-        <p>I created a expeiment to determine if going to a football game caused permanat hearing loss</p>
+        <p>I created an experiment to determine if going to a football game caused permanent hearing loss.</p>
       </div>
       <div class="project">
         <h3>Effects of hosting major sports events</h3>
-        <p>I did in depth research on the effects that hosting a major sporting event has on the local community</p>
+        <p>I did in-depth research on the effects that hosting a major sporting event has on the local community.</p>
       </div>
     </div>
     <a href="portfolio.html" class="btn" style="margin-top:2.5rem;">See All Projects</a>
@@ -487,7 +470,7 @@
   <!-- Call to Action -->
   <section class="cta">
     <h2>Want to Reach out?</h2>
-    <p>If you have any questions, or want to connect feel free to contact me at anytime.</p>
+    <p>If you have any questions or want to connect, feel free to contact me at any time.</p>
     <a href="contact.html">Contact Me</a>
   </section>
 
