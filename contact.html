@@ -6,214 +6,262 @@
   <title>Brady Merten | Contact</title>
   <style>
   /* Reset & Base */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
-  background: #f9f9f9;
-  line-height: 1.6;
-}
-
-/* Navbar */
-header {
-  background: #1a1a1a;
-  color: #fff;
-  padding: 1rem 0;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-}
-
-nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 90%;
-  margin: auto;
-  max-width: 1100px;
-  position: relative;
-}
-
-.logo {
-  font-size: 1.5rem;
-  letter-spacing: 1px;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 1.2rem;
-}
-
-.nav-links a {
-  color: white;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover,
-.nav-links a.active {
-  color: #00aaff;
-}
-
-/* Hamburger */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background: white;
-  transition: 0.3s;
-}
-
-/* Contact Section */
-.contact-section {
-  max-width: 700px;
-  margin: 4rem auto;
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-.contact-section h1 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: black;
-}
-
-.contact-section h1 span {
-  color: #00aaff;
-}
-
-.contact-section p {
-  text-align: center;
-  font-size: 1.1rem;
-  margin-bottom: 2rem;
-  color: #444;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 1.2rem;
-}
-
-label {
-  font-weight: 600;
-}
-
-input,
-textarea {
-  width: 100%;
-  padding: 0.8rem;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 1rem;
-  transition: border 0.3s;
-}
-
-input:focus,
-textarea:focus {
-  border-color: #00aaff;
-  outline: none;
-}
-
-textarea {
-  resize: none;
-  min-height: 120px;
-}
-
-button {
-  background: #00aaff;
-  color: white;
-  border: none;
-  padding: 0.9rem;
-  border-radius: 25px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #008ecc;
-}
-
-/* Footer */
-footer {
-  background: #1a1a1a;
-  color: white;
-  text-align: center;
-  padding: 1rem 0;
-  margin-top: 3rem;
-}
-
-.contact-info p {
-  margin-bottom: 0.8rem;
-  font-size: 1rem;
-}
-
-.contact-info a {
-  color: #00aaff;
-  text-decoration: none;
-}
-
-.contact-info a:hover {
-  text-decoration: underline;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-  .hamburger {
-    display: flex;
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
   }
 
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 60px;
-    right: 0;
-    background: #1a1a1a;
+  html, body {
+    height: 100%;
+  }
+
+  body {
+    display: flex;
     flex-direction: column;
-    width: 100%;
-    text-align: center;
-    padding: 1rem 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+    background: #f9f9f9;
+    line-height: 1.6;
+    font-size: 1.2vw;
   }
 
-  .nav-links.active {
-    display: flex;
+  main {
+    flex: 1;
   }
 
-  .nav-links li {
-    margin: 10px 0;
-  }
-
-  .contact-section {
-    margin: 2rem;
-    padding: 1.5rem;
+  /* Navbar */
+  header {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 2vh 5vw;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 0.3vh 0.5vh rgba(0, 0, 0, 0.3);
   }
 
   nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .logo {
+    font-size: 2vw;
+    letter-spacing: 0.1vw;
+  }
+
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2vw;
     flex-wrap: wrap;
   }
-}
-/* Ultra-wide screens: 1500px and above */
+
+  .nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    font-size: 1.2vw;
+  }
+
+  .nav-links a:hover,
+  .nav-links a.active {
+    color: #00aaff;
+  }
+
+  /* Hamburger */
+  .hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 0.5vh;
+  }
+
+  .hamburger div {
+    width: 2.5vw;
+    height: 0.3vw;
+    background: white;
+    transition: 0.3s;
+  }
+
+  /* Contact Section */
+  .contact-section {
+    width: 70%; /* ≈15% margin on each side */
+    margin: 5vh auto;
+    background: #fff;
+    padding: 3vh 2vw;
+    border-radius: 1vw;
+    box-shadow: 0 0.5vh 2vh rgba(0, 0, 0, 0.1);
+    text-align: left;
+    font-size: 1.2vw;
+    line-height: 2;
+  }
+
+  .contact-section h1 {
+    text-align: center;
+    font-size: 3vw;
+    margin-bottom: 2vh;
+    color: #1a1a1a;
+  }
+
+  .contact-section h1 span {
+    color: #00aaff;
+  }
+
+  .contact-section p {
+    text-align: center;
+    font-size: 1.2vw;
+    color: #444;
+    margin-bottom: 2vh;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 2vh;
+  }
+
+  label {
+    font-weight: 600;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 1vh 1vw;
+    border: 1px solid #ccc;
+    border-radius: 0.8vw;
+    font-size: 1.1vw;
+    transition: border 0.3s;
+  }
+
+  input:focus,
+  textarea:focus {
+    border-color: #00aaff;
+    outline: none;
+  }
+
+  textarea {
+    resize: none;
+    min-height: 20vh;
+  }
+
+  button {
+    background: #00aaff;
+    color: white;
+    border: none;
+    padding: 1.2vh 0;
+    border-radius: 3vw;
+    font-size: 1.2vw;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  button:hover {
+    background: #008ecc;
+  }
+
+  /* Footer */
+  footer {
+    background: #1a1a1a;
+    color: #ccc;
+    text-align: center;
+    padding: 3vh 5vw;
+    font-size: 1vw;
+    margin-top: auto;
+  }
+
+  footer a {
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+  }
+
+  footer a:hover {
+    color: white;
+  }
+
+  /* Responsive */
+  @media (max-width: 1024px) {
+    body {
+      font-size: 1.5vw;
+    }
+
+    .logo {
+      font-size: 3vw;
+    }
+
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      gap: 2vh;
+      background: #1a1a1a;
+      position: absolute;
+      top: 7vh;
+      left: 0;
+      padding: 2vh 0;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .hamburger {
+      display: flex;
+    }
+
+    .contact-section {
+      width: 85%;
+      padding: 3vh 4vw;
+      font-size: 1.5vw;
+    }
+
+    .contact-section h1 {
+      font-size: 4vw;
+    }
+
+    .contact-section p {
+      font-size: 1.5vw;
+    }
+  }
+
+  @media (max-width: 600px) {
+    body {
+      font-size: 2.5vw;
+    }
+
+    .logo {
+      font-size: 4vw;
+    }
+
+    .nav-links a {
+      font-size: 3vw;
+    }
+
+    .contact-section {
+      width: 90%;
+      padding: 4vh 5vw;
+      font-size: 2.5vw;
+    }
+
+    .contact-section h1 {
+      font-size: 5vw;
+    }
+
+    .contact-section p {
+      font-size: 2.5vw;
+    }
+  }
   </style>
 </head>
 <body>
-
   <header>
     <nav>
       <h2 class="logo">Brady Merten</h2>
@@ -233,34 +281,36 @@ footer {
     </nav>
   </header>
 
-  <section class="contact-section">
-    <h1><span style="color:black;">Contact</span> <span style="color:#00aaff;">Form</span></h1>
-    <p>Have a question or want to connect? Fill out the form below and I’ll get back to you as soon as I can.</p>
+  <main>
+    <section class="contact-section">
+      <h1><span>Contact</span> Form</h1>
+      <p>Have a question or want to connect? Fill out the form below and I’ll get back to you as soon as I can.</p>
 
-    <form action="#" method="post">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" placeholder="Your full name" required>
+      <form action="#" method="post">
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Your full name" required>
 
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" placeholder="Your email address" required>
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" placeholder="Your email address" required>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
 
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
 
-  <section class="contact-section">
-    <h1><span style="color:black;">Contact</span> <span style="color:#00aaff;">Me Directly</span></h1>
-    <p>Have a question and want to contact me directly? Use one of the following methods:</p>
+    <section class="contact-section">
+      <h1><span>Contact</span> Me Directly</h1>
+      <p>Have a question and want to contact me directly? Use one of the following methods:</p>
 
-    <div class="contact-info">
-      <p><strong>Personal Email:</strong> <a href="mailto:brady.merten1@gmail.com">brady.merten1@gmail.com</a></p>
-      <p><strong>School Email:</strong> <a href="mailto:brady.merten@stu.jefferson.kyschools.us">brady.merten@stu.jefferson.kyschools.us</a></p>
-      <p><strong>Phone Number:</strong> <a href="tel:+15026094249">+1 (502) 609-4249</a></p>
-    </div>
-  </section>
+      <div class="contact-info" style="text-align:center;">
+        <p><strong>Personal Email:</strong> <a href="mailto:brady.merten1@gmail.com">brady.merten1@gmail.com</a></p>
+        <p><strong>School Email:</strong> <a href="mailto:brady.merten@stu.jefferson.kyschools.us">brady.merten@stu.jefferson.kyschools.us</a></p>
+        <p><strong>Phone Number:</strong> <a href="tel:+15026094249">+1 (502) 609-4249</a></p>
+      </div>
+    </section>
+  </main>
 
   <footer>
     <p>&copy; 2025 Brady Merten — All Rights Reserved</p>
