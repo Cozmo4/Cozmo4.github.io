@@ -233,6 +233,28 @@
         flex-wrap: wrap;
       }
     }
+    @media (min-width: 1201px) {
+  .about-main-text {
+    max-width: none;       /* remove max-width */
+    margin: 5rem 15%;      /* keep centered with 15% padding on each side */
+    padding: 4rem 0;       /* maintain vertical padding, remove horizontal */
+  }
+
+  .about-section {
+    max-width: none;       /* remove max-width */
+    margin: 2rem 15%;      /* center content with side padding */
+    padding: 2rem 0;       /* maintain top/bottom padding */
+    gap: 3rem;
+  }
+
+  .about-section .about-img img {
+    max-width: none;       /* images scale naturally */
+  }
+
+  nav {
+    max-width: none;       /* navbar stretches across wider screens */
+  }
+}
   </style>
 </head>
 <body>
