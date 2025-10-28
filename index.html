@@ -368,8 +368,8 @@
         flex-wrap: wrap;
       }
     }
- @media (min-width: 1400px) {
-  /* --- Hero Section --- */
+@media (min-width: 1400px) {
+  /* Hero Section */
   .hero {
     padding-left: 15%;
     padding-right: 15%;
@@ -399,7 +399,7 @@
     font-size: 1.05rem;
   }
 
-  /* --- About Preview --- */
+  /* About Preview */
   .about-preview {
     padding-left: 15%;
     padding-right: 15%;
@@ -413,7 +413,7 @@
     font-size: 1.25rem;
   }
 
-  /* --- Skills Section --- */
+  /* Skills */
   .skills {
     padding-left: 15%;
     padding-right: 15%;
@@ -421,42 +421,30 @@
 
   .skills h2 {
     font-size: 2.6rem;
-    margin-bottom: 2.5rem;
   }
 
   .skills-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* keeps cards next to each other */
     gap: 2.5rem;
+    justify-content: flex-start;
   }
 
   .skill-card {
-    flex: 1 1 30%; /* three per row */
-    max-width: 30%;
+    flex: 1 1 calc(25% - 1.875rem); /* 4 per row minus gap */
+    max-width: calc(25% - 1.875rem);
     padding: 2.5rem;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .skill-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
 
   .skill-card h3 {
     font-size: 1.3rem;
-    margin-bottom: 0.5rem;
-    color: #00aaff;
   }
 
   .skill-card p {
     font-size: 1.15rem;
   }
 
-  /* --- Projects Preview --- */
+  /* Projects Preview */
   .projects-preview {
     padding-left: 15%;
     padding-right: 15%;
@@ -464,42 +452,30 @@
 
   .projects-preview h2 {
     font-size: 2.6rem;
-    margin-bottom: 2.5rem;
   }
 
   .project-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* keeps boxes next to each other */
     gap: 2.5rem;
+    justify-content: flex-start;
   }
 
   .project {
-    flex: 1 1 30%; /* three per row */
-    max-width: 30%;
-    background: #f9f9f9;
-    border-radius: 12px;
+    flex: 1 1 calc(25% - 1.875rem); /* 4 per row minus gap */
+    max-width: calc(25% - 1.875rem);
     padding: 2rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-
-  .project:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
 
   .project h3 {
     font-size: 1.2rem;
-    color: #008ecc;
-    margin-bottom: 0.5rem;
   }
 
   .project p {
     font-size: 1.05rem;
   }
 
-  /* --- Call to Action --- */
+  /* Call to Action */
   .cta {
     padding-left: 15%;
     padding-right: 15%;
