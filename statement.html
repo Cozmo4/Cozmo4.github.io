@@ -12,7 +12,6 @@
       box-sizing: border-box;
     }
 
-    /* Make body a column flex container */
     html, body {
       height: 100%;
     }
@@ -24,18 +23,18 @@
       color: #333;
       background: #f9f9f9;
       line-height: 1.6;
-      font-size: 1.2vw; /* flexible font size for scaling */
+      font-size: 1.2vw;
     }
 
     main {
-      flex: 1; /* allows main content to grow and push footer down */
+      flex: 1;
     }
 
-    /* Navbar */
+    /* Navbar (from Contact page) */
     header {
       background: #1a1a1a;
       color: #fff;
-      padding: 2vh 5vw;
+      padding: 2% 5%;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -74,7 +73,6 @@
       color: #00aaff;
     }
 
-    /* Hamburger */
     .hamburger {
       display: none;
       flex-direction: column;
@@ -91,13 +89,13 @@
 
     /* Statement Section */
     .statement-content {
-      width: 85%; /* increased width for extra margin */
+      width: 85%;
       margin: 5vh auto;
-      padding: 3vh 2.5vw; /* extra horizontal padding */
+      padding: 3vh 2.5vw;
       background: #fff;
       border-radius: 1vw;
       box-shadow: 0 0.5vh 2vh rgba(0, 0, 0, 0.1);
-      text-align: center; /* center content */
+      text-align: center;
       font-size: 1.2vw;
       line-height: 2;
     }
@@ -106,7 +104,7 @@
       font-size: 3vw;
       color: #1a1a1a;
       margin-bottom: 2vh;
-      text-align: center; /* center heading */
+      text-align: center;
     }
 
     .statement-content h1 span {
@@ -125,7 +123,7 @@
       text-align: center;
       padding: 3vh 5vw;
       font-size: 1vw;
-      margin-top: auto; /* pushes footer to bottom */
+      margin-top: auto;
     }
 
     footer a {
@@ -204,7 +202,7 @@
     <section class="statement-content">
       <h1>My <span>Academic Statement</span></h1>
       <p>
-        Currently my academic focus is on pursuing mechanical engineering, because of the wide variety of skills, and opportunities I will gain that no other engineering major offers. Throughout school I have 7 years of experience in which we competed in regional and national competitions. Over the past 2 years I have participated in TSA (technology student association) in which I have been able to create a vegetarian restaurant with my team and ultimately ended up placing 6th. Currently within TSA I am working on designing a marble maze to be mass produced as well as another website for our community. Through these organizations and projects I have been able to develop design, problem solving, and collaborative skills to allow me to complete hands-on engineering projects that have been preparing me with the engineering basics, ultimately leading me on a path to be able to design cleaner and more efficient cars, machines.
+        Currently my academic focus is on pursuing mechanical engineering, because of the wide variety of skills, and opportunities I will gain that no other engineering major offers. Throughout school I have 7 years of experience in which we competed in regional and national competitions. Over the past 2 years I have participated in TSA (Technology Student Association) in which I have been able to create a vegetarian restaurant with my team and ultimately ended up placing 6th. Currently within TSA I am working on designing a marble maze to be mass produced as well as another website for our community. Through these organizations and projects I have been able to develop design, problem-solving, and collaborative skills to allow me to complete hands-on engineering projects that have been preparing me with the engineering basics, ultimately leading me on a path to be able to design cleaner and more efficient cars and machines.
       </p>
     </section>
   </main>
@@ -216,7 +214,6 @@
   <script>
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
-
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('active');
       hamburger.classList.toggle('open');
