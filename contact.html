@@ -210,22 +210,14 @@ footer {
   }
 }
 /* Large screens above 1600px */
-/* Large screens above 1600px */
 /* Large screens above 1400px */
 @media (min-width: 1400px) {
-  /* Nav and footer full width */
-  nav, footer {
-    width: 100%;
-    max-width: none;
-    margin: 0;
-  }
-
   /* Contact sections centered with 15% margin on each side */
   .contact-section {
     max-width: none;      /* allow full scaling */
-    margin-left: 15%;
+    margin-left: 15%;     /* centers with side space */
     margin-right: 15%;
-    padding: 3.5rem 2rem; /* vertical padding bigger, horizontal smaller */
+    padding: 3.5rem 2rem; /* vertical padding larger, horizontal smaller */
     font-size: 1.25rem;   /* scale text */
   }
 
@@ -240,12 +232,12 @@ footer {
   }
 
   form {
-    gap: 1.5rem; /* scale gap between inputs */
+    gap: 1.5rem;
   }
 
   input,
   textarea {
-    width: 100%;   /* full width within section */
+    width: 100%;
     padding: 1rem;
     font-size: 1.1rem;
   }
@@ -261,7 +253,7 @@ footer {
   }
 
   footer {
-    padding: 2rem 1rem;
+    padding: 2rem 1rem; /* small scale-up only */
   }
 }
 
