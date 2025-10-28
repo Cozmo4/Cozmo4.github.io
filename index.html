@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brady Merten | Home</title>
+  <title>My Portfolio | Home</title>
   <style>
     /* Reset & Base */
     * {
@@ -18,30 +18,30 @@
       background: #f9f9f9;
       line-height: 1.6;
       scroll-behavior: smooth;
-      font-size: 1vw; /* base font scales with viewport */
     }
-
-    a { text-decoration: none; }
 
     section {
       opacity: 0;
-      transform: translateY(4vh);
+      transform: translateY(40px);
       animation: fadeInUp 0.8s ease forwards;
     }
 
     @keyframes fadeInUp {
-      to { opacity: 1; transform: translateY(0); }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
 
     /* Navbar */
     header {
-      background: #1a1a1a;
+      background: #1f1f1f;
       color: #fff;
-      padding: 1.5vh 0;
+      padding: 1rem 0;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 0.3vh 1vh rgba(0,0,0,0.3);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
 
     nav {
@@ -50,40 +50,44 @@
       justify-content: space-between;
       width: 90%;
       margin: auto;
+      max-width: 1100px;
       position: relative;
     }
 
     .logo {
-      font-size: 2vw;
-      letter-spacing: 0.1vw;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
     }
 
     .nav-links {
       list-style: none;
       display: flex;
-      gap: 2vw;
+      gap: 1.2rem;
     }
 
     .nav-links a {
       color: white;
+      text-decoration: none;
       font-weight: 500;
-      font-size: 1.2vw;
       transition: color 0.3s;
     }
 
     .nav-links a:hover,
-    .nav-links a.active { color: #00aaff; }
+    .nav-links a.active {
+      color: #00aaff;
+    }
 
+    /* Hamburger */
     .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
-      gap: 0.6vh;
+      gap: 5px;
     }
 
     .hamburger div {
-      width: 2.3vw;
-      height: 0.4vh;
+      width: 25px;
+      height: 3px;
       background: white;
       transition: 0.3s;
     }
@@ -96,64 +100,70 @@
       height: 92vh;
       width: 100%;
       background: linear-gradient(to right, #e3f2fd, #f9f9f9);
-      padding: 4vh 5vw;
-      flex-wrap: wrap;
+      padding: 4rem 2rem;
+      background-size: cover;
+      background-position: center;
     }
 
     .hero-content {
       display: flex;
       align-items: center;
-      gap: 3vw;
+      gap: 3rem;
       flex-wrap: wrap;
-      max-width: 90%;
+      max-width: 1000px;
     }
 
     .profile-img {
-      width: 20vw;
-      height: 20vw;
-      min-width: 150px;
-      max-width: 300px;
-      border-radius: 50%;
-      border: 0.5vw solid #00aaff;
+      width: 250px;
+      height: 250px;
       object-fit: cover;
-      box-shadow: 0 0.5vh 1.5vh rgba(0,0,0,0.1);
+      border-radius: 50%;
+      border: 4px solid #00aaff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       transition: transform 0.4s ease;
     }
 
-    .profile-img:hover { transform: scale(1.05); }
+    .profile-img:hover {
+      transform: scale(1.05);
+    }
 
     .intro {
-      max-width: 40vw;
-      min-width: 250px;
+      max-width: 550px;
     }
 
     .intro h1 {
-      font-size: 2.5vw;
-      margin-bottom: 1vh;
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
     }
 
-    .intro h1 span { color: #00aaff; }
+    .intro h1 span {
+      color: #00aaff;
+    }
 
     .intro p {
-      font-size: 1.1vw;
-      margin-bottom: 2vh;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
     }
 
     .btn {
       display: inline-block;
-      padding: 1vh 2vw;
+      padding: 0.8rem 1.5rem;
       background: #00aaff;
       color: white;
-      border-radius: 2vw;
-      font-size: 1vw;
-      font-weight: 500;
+      border-radius: 25px;
+      text-decoration: none;
       transition: all 0.3s ease;
     }
 
-    .btn:hover { transform: scale(1.05); }
+    .btn:hover {
+      background: #00aaff;
+      transform: scale(1.05);
+    }
 
-    /* Section spacing */
-    section { padding: 6vh 5vw; }
+    /* Section Spacing */
+    section {
+      padding: 6rem 1rem;
+    }
 
     /* About Preview */
     .about-preview {
@@ -161,8 +171,17 @@
       text-align: center;
     }
 
-    .about-preview h2 { color: #00aaff; font-size: 2vw; margin-bottom: 1vh; }
-    .about-preview p { font-size: 1.1vw; max-width: 70%; margin: 0 auto 2vh; }
+    .about-preview h2 {
+      color: #00aaff;
+      margin-bottom: 1rem;
+      font-size: 2.2rem;
+    }
+
+    .about-preview p {
+      max-width: 750px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+    }
 
     /* Skills */
     .skills {
@@ -170,122 +189,148 @@
       text-align: center;
     }
 
-    .skills h2 { color: #00aaff; font-size: 2vw; margin-bottom: 2vh; }
+    .skills h2 {
+      color: #00aaff;
+      margin-bottom: 2rem;
+      font-size: 2.2rem;
+    }
 
     .skills-grid {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 2vw;
+      gap: 2.5rem;
     }
 
     .skill-card {
       background: white;
-      padding: 2vh 2vw;
-      border-radius: 1vw;
-      box-shadow: 0 0.5vh 1.5vh rgba(0,0,0,0.1);
-      width: 18vw;
-      min-width: 220px;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 260px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .skill-card:hover {
-      transform: translateY(-0.5vh);
-      box-shadow: 0 1vh 3vh rgba(0,0,0,0.2);
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
-    .skill-card h3 { color: #00aaff; font-size: 1.2vw; margin-bottom: 0.5vh; }
-    .skill-card p { font-size: 1vw; }
+    .skill-card h3 {
+      color: #00aaff;
+      margin-bottom: 0.5rem;
+    }
 
-    /* Projects */
+    /* Projects Preview */
     .projects-preview {
       background: white;
       text-align: center;
     }
 
-    .projects-preview h2 { color: #00aaff; font-size: 2vw; margin-bottom: 1vh; }
+    .projects-preview h2 {
+      color: #00aaff;
+      margin-bottom: 1rem;
+      font-size: 2.2rem;
+    }
 
     .project-grid {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 2vw;
+      gap: 2.5rem;
     }
 
     .project {
       background: #f9f9f9;
-      border-radius: 1vw;
-      padding: 2vh 1.5vw;
-      width: 22vw;
-      min-width: 250px;
-      box-shadow: 0 0.5vh 1.5vh rgba(0,0,0,0.1);
+      border-radius: 12px;
+      padding: 1.8rem;
+      width: 300px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       text-align: left;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .project:hover {
-      transform: translateY(-0.5vh);
-      box-shadow: 0 1vh 3vh rgba(0,0,0,0.2);
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
-    .project h3 { color: #008ecc; font-size: 1.1vw; margin-bottom: 0.5vh; }
-    .project p { font-size: 0.95vw; }
+    .project h3 {
+      color: #008ecc;
+      margin-bottom: 0.5rem;
+    }
 
-    /* CTA */
+    .project p {
+      font-size: 0.95rem;
+    }
+
+    /* Call to Action */
     .cta {
       background: linear-gradient(to right, #e3f2fd, #f9f9f9);
+      color: black;
       text-align: center;
-      padding: 4vh 5vw;
+      padding: 4rem 1rem;
     }
 
-    .cta h2 { font-size: 2vw; margin-bottom: 1vh; }
-    .cta p { font-size: 1vw; max-width: 70%; margin: 0 auto 2vh; }
+    .cta h2 {
+      font-size: 2.3rem;
+      margin-bottom: 1rem;
+    }
+
+    .cta p {
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
+    }
+
     .cta a {
+      color:white;
       background: #008ecc;
-      color: white;
-      padding: 1vh 2vw;
-      border-radius: 2vw;
-      font-size: 1vw;
+      padding: 0.9rem 1.8rem;
+      border-radius: 25px;
+      text-decoration: none;
       font-weight: 600;
       transition: all 0.3s ease;
     }
 
-    .cta a:hover { transform: scale(1.05); }
+    .cta a:hover {
+      transform: scale(1.05);
+    }
 
     /* Footer */
     footer {
       background: #1a1a1a;
       color: #ccc;
       text-align: center;
-      padding: 2.5vh 5vw;
+      padding: 2.5rem 1rem;
+      margin-top: 0;
     }
 
-    footer a { color: #00aaff; transition: color 0.3s; }
-    footer a:hover { color: white; }
-
-    /* --- Responsive --- */
-    @media (max-width: 1000px) {
-      body { font-size: 1.5vw; }
-
-      .hero-content { flex-direction: column; align-items: center; }
-      .intro { max-width: 90%; text-align: center; }
-      .profile-img { width: 40vw; height: 40vw; min-width: 180px; }
-
-      .skill-card { width: 40vw; margin-bottom: 2vh; }
-      .project { width: 80vw; margin-bottom: 2vh; }
-
-      .intro h1 { font-size: 4vw; }
-      .intro p { font-size: 2vw; }
-      .about-preview h2, .skills h2, .projects-preview h2, .cta h2 { font-size: 3vw; }
-      .about-preview p, .cta p, .skill-card p, .project p { font-size: 2vw; }
+    footer p {
+      margin-bottom: 0.5rem;
     }
 
-    @media (max-width: 600px) {
-      .nav-links { display: none; position: absolute; top: 6vh; right: 0; flex-direction: column; width: 100%; background: #1a1a1a; }
-      .nav-links.active { display: flex; }
-      .hamburger { display: flex; }
-      nav { flex-wrap: wrap; }
+    footer .socials {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
     }
+
+    footer a {
+      color: #00aaff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: white;
+    }
+
+    /* --- Media Query for screens >= 1400px --- */
+   
+
   </style>
 </head>
 <body>
@@ -295,26 +340,28 @@
     <nav>
       <h2 class="logo">Brady Merten</h2>
       <div class="hamburger" id="hamburger">
-        <div></div><div></div><div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About Me</a></li>
         <li><a href="statement.html">Academic Statement</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="portfolio.html">Written work/Portfolio</a></li>
         <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Contact Information</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <section class="hero">
     <div class="hero-content">
       <img src="w.png" alt="Brady Merten" class="profile-img">
       <div class="intro">
         <h1>Hello, I'm <span>Brady Merten</span></h1>
-        <p>Welcome to my portfolio! I’m a student passionate about mechanical engineering and turning ideas into real designs.</p>
+        <p>Welcome to my portfolio! I’m a student passionate about mechanical engineering and the process of turning ideas into real designs. Here you can learn more about me, explore my projects, achievements, and goals as I continue to grow and expand my learning</p>
         <a href="portfolio.html" class="btn">View My Work</a>
       </div>
     </div>
@@ -323,7 +370,7 @@
   <!-- About Preview -->
   <section class="about-preview">
     <h2>About Me</h2>
-    <p>Hello! I am Brady Merten. I have a passion for web development, mechanical engineering, and robotics. Outside school, I enjoy playing sports and running cross country.</p>
+    <p>Hello I am Brady Merten, I have a passionate about web development, mechancial engineering, and robotics. Outside of school I enjoy playing sports, running cross country for my school</p>
     <a href="about.html" class="btn">Learn More</a>
   </section>
 
@@ -333,15 +380,15 @@
     <div class="skills-grid">
       <div class="skill-card">
         <h3>Frontend Development</h3>
-        <p>HTML, CSS, and JavaScript for modern, responsive websites.</p>
+        <p>I have experience using HTML, CSS, and JavaScript to create modern, responsive websites.</p>
       </div>
       <div class="skill-card">
-        <h3>Java Development</h3>
-        <p>Experience creating GUI applications for school and personal projects.</p>
+        <h3>Java development</h3>
+        <p>I have experince as a JAVA developer creating GUI for both personal use, as well as school proojects</p>
       </div>
       <div class="skill-card">
         <h3>3D Printing & Prototyping</h3>
-        <p>Designing and printing functional 3D models for projects and competitions.</p>
+        <p>Experienced in designing and printing 3D models in order to create functional projcets for science fair, or personal projects.</p>
       </div>
     </div>
   </section>
@@ -351,25 +398,25 @@
     <h2>Featured Projects</h2>
     <div class="project-grid">
       <div class="project">
-        <h3>Vegetarian Restaurant Website</h3>
-        <p>Developed a fully responsive vegetarian restaurant website for TSA competitions.</p>
+        <h3>Vegetarian restaurant website</h3>
+        <p>In a team we developed a fully responsive website vegeatirain restuaurant to compete at TSA regionals,states, and nationals.</p>
       </div>
       <div class="project">
-        <h3>Long Term Hearing Loss Study</h3>
-        <p>Experiment to determine if attending a football game affects hearing permanently.</p>
+        <h3>Long term hearing loss study</h3>
+        <p>I created a expeiment to determine if going to a football game caused permanat hearing loss</p>
       </div>
       <div class="project">
-        <h3>Sports Event Impact Study</h3>
-        <p>Researched the effects of hosting major sporting events on local communities.</p>
+        <h3>Effects of hosting major sports events</h3>
+        <p>I did in depth research on the effects that hosting a major sporting event has on the local community</p>
       </div>
     </div>
-    <a href="portfolio.html" class="btn" style="margin-top:2vh;">See All Projects</a>
+    <a href="portfolio.html" class="btn" style="margin-top:2.5rem;">See All Projects</a>
   </section>
 
   <!-- Call to Action -->
   <section class="cta">
-    <h2>Want to Reach Out?</h2>
-    <p>If you have any questions or want to connect, feel free to contact me anytime.</p>
+    <h2>Want to Reach out?</h2>
+    <p>If you have any questions, or want to connect feel free to contact me at anytime.</p>
     <a href="contact.html">Contact Me</a>
   </section>
 
@@ -381,6 +428,7 @@
   <script>
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
+
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('active');
       hamburger.classList.toggle('open');
@@ -388,3 +436,4 @@
   </script>
 </body>
 </html>
+
