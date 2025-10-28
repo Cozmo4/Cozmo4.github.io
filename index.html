@@ -368,6 +368,36 @@
         flex-wrap: wrap;
       }
     }
+    /* Large screens above 1200px */
+@media (min-width: 1201px) {
+  nav {
+    max-width: none;      /* remove max-width */
+    width: 90%;
+    margin: auto;
+  }
+
+  .hero-content,
+  .about-preview,
+  .skills-grid,
+  .project-grid {
+    width: auto;
+    margin: 0 15%;        /* 15% padding on each side */
+  }
+
+  .hero {
+    padding: 4rem 15%;
+  }
+
+  section {
+    padding: 6rem 15%;
+  }
+
+  .about-preview p,
+  .cta p {
+    max-width: none;      /* allow paragraph text to stretch naturally */
+  }
+}
+
   </style>
 </head>
 <body>
