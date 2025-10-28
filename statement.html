@@ -17,38 +17,37 @@
       color: #333;
       background: #f9f9f9;
       line-height: 1.6;
+      font-size: 1.2vw; /* flexible font size for scaling */
     }
 
     /* Navbar */
     header {
       background: #1a1a1a;
       color: #fff;
-      padding: 1rem 0;
+      padding: 2vh 5vw;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+      box-shadow: 0 0.3vh 0.5vh rgba(0, 0, 0, 0.3);
     }
 
     nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 90%;
-      margin: auto;
-      max-width: 1100px;
-      position: relative;
+      width: 100%;
     }
 
     .logo {
-      font-size: 1.5rem;
-      letter-spacing: 1px;
+      font-size: 2vw;
+      letter-spacing: 0.1vw;
     }
 
     .nav-links {
       list-style: none;
       display: flex;
-      gap: 1.2rem;
+      gap: 2vw;
+      flex-wrap: wrap;
     }
 
     .nav-links a {
@@ -56,6 +55,7 @@
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s;
+      font-size: 1.2vw;
     }
 
     .nav-links a:hover,
@@ -68,34 +68,33 @@
       display: none;
       flex-direction: column;
       cursor: pointer;
-      gap: 5px;
+      gap: 0.5vh;
     }
 
     .hamburger div {
-      width: 25px;
-      height: 3px;
+      width: 2.5vw;
+      height: 0.3vw;
       background: white;
       transition: 0.3s;
     }
 
-    /* Statement Section (Intro + Content) */
+    /* Statement Section */
     .statement-content {
-      max-width: 900px;
-      margin: 5rem auto;
-      padding: 3rem 2rem;
-      font-size: 1.1rem;
-      color: #444;
-      line-height: 1.8;
+      width: 80%;
+      margin: 5vh auto;
+      padding: 3vh 2vw;
       background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-      text-align: center;
+      border-radius: 1vw;
+      box-shadow: 0 0.5vh 2vh rgba(0, 0, 0, 0.1);
+      text-align: left;
+      font-size: 1.2vw;
+      line-height: 2;
     }
 
     .statement-content h1 {
-      font-size: 2.5rem;
+      font-size: 3vw;
       color: #1a1a1a;
-      margin-bottom: 2rem;
+      margin-bottom: 2vh;
     }
 
     .statement-content h1 span {
@@ -103,11 +102,8 @@
     }
 
     .statement-content p {
-      max-width: 800px;
-      margin: 0 auto;
-      font-size: 1.1rem;
+      font-size: 1.2vw;
       color: #444;
-      text-align: left;
     }
 
     /* Footer */
@@ -115,12 +111,8 @@
       background: #1a1a1a;
       color: #ccc;
       text-align: center;
-      padding: 2.5rem 1rem;
-      margin-top: 3rem;
-    }
-
-    footer p {
-      margin-bottom: 0.5rem;
+      padding: 3vh 5vw;
+      font-size: 1vw;
     }
 
     footer a {
@@ -135,45 +127,78 @@
     }
 
     /* Responsive */
-    @media (max-width: 768px) {
-      .statement-content {
-        padding: 2rem 1.5rem;
+    @media (max-width: 1024px) {
+      body {
+        font-size: 1.5vw;
       }
 
-      .statement-content h1 {
-        font-size: 2.2rem;
-      }
-
-      .hamburger {
-        display: flex;
+      .logo {
+        font-size: 3vw;
       }
 
       .nav-links {
         display: none;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: #1a1a1a;
         flex-direction: column;
         width: 100%;
         text-align: center;
-        padding: 1rem 0;
+        gap: 2vh;
+        background: #1a1a1a;
+        position: absolute;
+        top: 7vh;
+        left: 0;
+        padding: 2vh 0;
       }
 
       .nav-links.active {
         display: flex;
       }
 
-      .nav-links li {
-        margin: 10px 0;
+      .hamburger {
+        display: flex;
       }
 
-      nav {
-        flex-wrap: wrap;
+      .statement-content {
+        width: 90%;
+        padding: 3vh 4vw;
+        font-size: 1.5vw;
+      }
+
+      .statement-content h1 {
+        font-size: 4vw;
+      }
+
+      .statement-content p {
+        font-size: 1.5vw;
       }
     }
 
+    @media (max-width: 600px) {
+      body {
+        font-size: 2.5vw;
+      }
 
+      .logo {
+        font-size: 4vw;
+      }
+
+      .nav-links a {
+        font-size: 3vw;
+      }
+
+      .statement-content {
+        width: 95%;
+        padding: 4vh 5vw;
+        font-size: 2.5vw;
+      }
+
+      .statement-content h1 {
+        font-size: 5vw;
+      }
+
+      .statement-content p {
+        font-size: 2.5vw;
+      }
+    }
   </style>
 </head>
 <body>
@@ -197,7 +222,6 @@
     </nav>
   </header>
 
-  <!-- Combined Statement Section -->
   <section class="statement-content">
     <h1>My <span>Academic Statement</span></h1>
     <p>
