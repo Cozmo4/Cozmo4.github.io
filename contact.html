@@ -209,7 +209,18 @@
         flex-wrap: wrap;
       }
     }
+    /* Large screens above 1200px */
+@media (min-width: 1201px) {
+  .contact-section {
+    max-width: none;       /* remove max-width */
+    margin: 4rem 15%;      /* center content with 15% padding on sides */
+    padding: 2rem 0;       /* maintain vertical padding, remove horizontal */
+  }
 
+  nav {
+    max-width: none;       /* navbar stretches across wider screens */
+  }
+}
   </style>
 </head>
 <body>
