@@ -236,6 +236,64 @@
     /* Large screens above 1600px */
 /* Large screens above 1600px */
 /* Large screens above 1600px */
+@media (min-width: 1400px) {
+  /* Main Intro Section */
+  .about-main-text {
+    max-width: none;          /* remove cap */
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 3rem 2%;         /* optional small inner padding */
+    font-size: 1.4rem;        /* slightly larger for big screens */
+    text-align: center;
+  }
+
+  .about-main-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .about-main-text p {
+    max-width: none;
+    margin: 0;
+    text-align: left;
+  }
+
+  /* About Content Sections */
+  .about-section {
+    max-width: none;
+    width: 100%;
+    margin-left: 15%;
+    margin-right: 15%;
+    padding: 2rem 0;
+    gap: 3rem;
+  }
+
+  /* Images scale to 60% and center */
+  .about-img {
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-img img {
+    max-width: 60%;
+    width: 60%;
+    height: auto;
+  }
+
+  /* Text inside sections stays readable */
+  .about-text {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .about-text h2 {
+    font-size: 2rem;
+  }
+
+  .about-text p {
+    font-size: 1.25rem;
+  }
+}
 
 
 
