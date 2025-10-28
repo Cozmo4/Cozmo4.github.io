@@ -1,301 +1,196 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brady Merten | Portfolio</title>
-  <style>
-    /* Reset & Base */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      color: #333;
-      background: #f9f9f9;
-      line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-      font-size: 1vw;
-    }
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background: #f9f9f9;
+  line-height: 1.6;
+}
 
-    main {
-      flex: 1;
-    }
+/* Navbar (same as other pages) */
+header {
+  background: #1a1a1a;
+  color: #fff;
+  padding: 1.2vh 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 0.3vh 1vh rgba(0,0,0,0.3);
+}
 
-    /* Navbar */
-    header {
-      background: #1a1a1a;
-      color: #fff;
-      padding: 1.5vh 0;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 0.3vh 1vh rgba(0, 0, 0, 0.3);
-    }
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  margin: auto;
+  position: relative;
+}
 
-    nav {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      width: 90%;
-      margin: auto;
-      position: relative;
-    }
+.logo {
+  font-size: 2vw;
+  letter-spacing: 0.1vw;
+}
 
-    .logo {
-      font-size: 2vw;
-      letter-spacing: 0.1vw;
-    }
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2vw;
+}
 
-    .nav-links {
-      list-style: none;
-      display: flex;
-      gap: 2vw;
-    }
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.2vw;
+  transition: color 0.3s;
+}
 
-    .nav-links a {
-      color: white;
-      text-decoration: none;
-      font-weight: 500;
-      font-size: 1.2vw;
-      transition: color 0.3s;
-    }
+.nav-links a:hover,
+.nav-links a.active {
+  color: #00aaff;
+}
 
-    .nav-links a:hover,
-    .nav-links a.active {
-      color: #00aaff;
-    }
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 0.6vh;
+}
 
-    /* Hamburger */
-    .hamburger {
-      display: none;
-      flex-direction: column;
-      cursor: pointer;
-      gap: 0.6vh;
-    }
+.hamburger div {
+  width: 2.3vw;
+  height: 0.4vh;
+  background: white;
+  transition: 0.3s;
+}
 
-    .hamburger div {
-      width: 2.3vw;
-      height: 0.4vh;
-      background: white;
-      transition: 0.3s;
-    }
+/* Portfolio Intro Box */
+.portfolio-intro-box {
+  margin: 5vh 20%;
+  padding: 3%;
+  background: white;
+  border-radius: 1.5vw;
+  box-shadow: 0 0.4vh 1.2vh rgba(0,0,0,0.1);
+  text-align: center;
+}
 
-    /* Portfolio Intro Box */
-    .portfolio-intro-box {
-      background: white;
-      margin: 5vh 15%;
-      padding: 3vh 2vw;
-      border-radius: 1.5vw;
-      box-shadow: 0 0.4vh 1.2vh rgba(0, 0, 0, 0.1);
-      text-align: center;
-    }
+.portfolio-intro-box h1 {
+  font-size: 3vw;
+  color: #1a1a1a;
+  margin-bottom: 2vh;
+}
 
-    .portfolio-intro-box h1 {
-      font-size: 3vw;
-      color: #1a1a1a;
-      margin-bottom: 2vh;
-    }
+.portfolio-intro-box h1 span {
+  color: #00aaff;
+}
 
-    .portfolio-intro-box h1 span {
-      color: #00aaff;
-    }
+.portfolio-intro-box p {
+  font-size: 1.2vw;
+  color: #444;
+}
 
-    .portfolio-intro-box p {
-      font-size: 1.2vw;
-      color: #444;
-    }
+/* Projects Grid */
+.projects-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  margin: 0 20vh 5vh 20vh; /* replace 20vh with 20% for proper scaling */
+  padding: 0;
+}
 
-    /* Projects Grid */
-    .projects-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 3vh;
-      margin: 0 15vh 5vh 15vh;
-    }
+.project-card {
+  background: white;
+  border-radius: 1.5vw;
+  box-shadow: 0 0.4vh 1.2vh rgba(0,0,0,0.1);
+  padding: 2vh;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
 
-    .project-card {
-      background: white;
-      border-radius: 1.5vw;
-      box-shadow: 0 0.4vh 1.2vh rgba(0, 0, 0, 0.1);
-      padding: 2vh 2vw;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      display: flex;
-      flex-direction: column;
-    }
+.project-card:hover {
+  transform: translateY(-1vh);
+  box-shadow: 0 1vh 2vh rgba(0,0,0,0.15);
+}
 
-    .project-card:hover {
-      transform: translateY(-0.8vh);
-      box-shadow: 0 0.8vh 2vh rgba(0, 0, 0, 0.15);
-    }
+.project-card img,
+.project-card iframe {
+  width: 100%;
+  aspect-ratio: 4/2; /* sets width:height = 4:2 */
+  border-radius: 1vw;
+  margin-bottom: 1.2vh;
+  object-fit: cover;
+}
 
-    .project-card img, .project-card iframe {
-      width: 100%;
-      height: 40vh;
-      border-radius: 1vw;
-      margin-bottom: 1vh;
-      object-fit: cover;
-    }
+.project-card h3 {
+  color: #00aaff;
+  font-size: 1.8vw;
+  margin-bottom: 0.8vh;
+}
 
-    .project-card h3 {
-      color: #00aaff;
-      font-size: 2vw;
-      margin-bottom: 1vh;
-    }
+.project-card p {
+  font-size: 1.1vw;
+  color: #444;
+}
 
-    .project-card p {
-      font-size: 1.1vw;
-      color: #444;
-    }
+/* Footer */
+footer {
+  background: #1a1a1a;
+  color: #ccc;
+  text-align: center;
+  padding: 2.5vh 1vw;
+  margin-top: 3vh;
+}
 
-    /* Footer */
-    footer {
-      background: #1a1a1a;
-      color: #ccc;
-      text-align: center;
-      padding: 3vh 0;
-      font-size: 1vw;
-    }
+footer a {
+  color: #00aaff;
+  text-decoration: none;
+  font-weight: 500;
+}
 
-    footer a {
-      color: #00aaff;
-      text-decoration: none;
-      font-weight: 500;
-    }
+footer a:hover {
+  color: white;
+}
 
-    footer a:hover {
-      color: white;
-    }
+/* Responsive */
+@media (max-width: 768px) {
+  .portfolio-intro-box {
+    margin: 4vh 10%;
+    padding: 4%;
+  }
+  .portfolio-intro-box h1 { font-size: 5vw; }
+  .portfolio-intro-box p { font-size: 2.2vw; }
 
-    /* Responsive */
-    @media (max-width: 1000px) {
-      .logo { font-size: 3vw; }
-      .nav-links a { font-size: 2vw; }
-      .portfolio-intro-box h1 { font-size: 4vw; }
-      .portfolio-intro-box p { font-size: 2vw; }
-      .projects-grid { margin: 0 10vh 5vh 10vh; }
-      .project-card h3 { font-size: 3vw; }
-      .project-card p { font-size: 2vw; }
-      .project-card img, .project-card iframe { height: 35vh; }
-    }
+  .project-card img,
+  .project-card iframe {
+    aspect-ratio: 4/2;
+    height: auto;
+  }
 
-    @media (max-width: 768px) {
-      .hamburger { display: flex; }
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 6vh;
-        right: 0;
-        background: #1a1a1a;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        padding: 2vh 0;
-      }
-      .nav-links.show { display: flex; }
-      .nav-links li { margin: 1vh 0; }
-      .projects-grid { margin: 0 5% 5% 5%; }
-      .project-card img, .project-card iframe { height: 30vh; }
-      .project-card h3 { font-size: 4vw; }
-      .project-card p { font-size: 3vw; }
-    }
-  </style>
-</head>
-<body>
+  .project-card h3 { font-size: 3vw; }
+  .project-card p { font-size: 2.2vw; }
 
-  <header>
-    <nav>
-      <h2 class="logo">Brady Merten</h2>
-      <div class="hamburger" id="hamburger">
-        <div></div>
-        <div></div>
-        <div></div>
-      </div>
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
-        <li><a href="statement.html">Academic Statement</a></li>
-        <li><a href="portfolio.html" class="active">Written work/Portfolio</a></li>
-        <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html">Contact Information</a></li>
-      </ul>
-    </nav>
-  </header>
+  .hamburger { display: flex; }
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 6vh;
+    right: 0;
+    background: #1a1a1a;
+    flex-direction: column;
+    width: 100%;
+    text-align: center;
+    padding: 2vh 0;
+  }
 
-  <main>
-    <section class="portfolio-intro-box">
-      <h1>My <span>Projects</span></h1>
-      <p>Here’s a collection of projects that showcase the skills I have developed over the last couple of years.</p>
-    </section>
-
-    <section class="projects-grid">
-      <div class="project-card">
-        <iframe src="home.pdf" frameborder="0"></iframe>
-        <h3>Writing Example</h3>
-        <p>This is my writing example about homelessness, showcasing my writing skills developed over the past 4 years.</p>
-      </div>
-
-      <div class="project-card">
-        <iframe src="science1.pdf" frameborder="0"></iframe>
-        <h3>Enhancing Website Efficiency</h3>
-        <p>This research project explored whether automated scripts improve website performance.</p>
-      </div>
-
-      <div class="project-card">
-        <iframe src="science2.pdf" frameborder="0"></iframe>
-        <h3>Long-Term Hearing Loss</h3>
-        <p>This project examined whether attending college football games can cause hearing loss.</p>
-      </div>
-
-      <div class="project-card">
-        <iframe src="lang.pdf" frameborder="0"></iframe>
-        <h3>Sporting Events’ Effect on Economy</h3>
-        <p>This research used data from over 10 major sporting events across 50 years to determine if countries should host them.</p>
-      </div>
-
-      <div class="project-card">
-        <iframe src="science3.pdf" frameborder="0"></iframe>
-        <h3>Gear Ratios Effects on Wind Turbines</h3>
-        <p>This project tested three gear ratios at different speeds to see which performs best under varying wind conditions.</p>
-      </div>
-
-      <div class="project-card">
-        <img src="orgin.png" alt="Origin Kitchen Screenshot">
-        <h3>Origin Kitchen, Vegan Restaurant</h3>
-        <p>I designed and created a vegetarian restaurant website for TSA competitions, placing 6th nationally.</p>
-      </div>
-
-      <div class="project-card">
-        <img src="scram.png" alt="Word Scrambler Screenshot">
-        <h3>Word Scrambler</h3>
-        <p>I created a web application that scrambles words for guessing.</p>
-      </div>
-
-      <div class="project-card">
-        <img src="blue.png" alt="Blueprint Builder Screenshot">
-        <h3>Blueprint Builder</h3>
-        <p>I created a web application for designing floor layouts of houses and apartments.</p>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Brady Merten — All Rights Reserved</p>
-    <p>Designed & coded by Brady Merten</p>
-  </footer>
-
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
-    });
-  </script>
-</body>
-</html>
+  .nav-links.show { display: flex; }
+  .nav-links li { margin: 1vh 0; }
+}
+</style>
