@@ -96,7 +96,7 @@
     .hero {
       display: flex;
       justify-content: center;
-      align-items: center;  
+      align-items: center;
       height: 92vh;
       width: 100%;
       background: linear-gradient(to right, #e3f2fd, #f9f9f9);
@@ -328,156 +328,138 @@
       color: white;
     }
 
-@media (min-width: 1400px) {
+    /* --- Media Query for screens >= 1400px --- */
+    @media (min-width: 1400px) {
 
-  /* --- Hero Section --- */
-  .hero {
-    padding-left: 10%;
-    padding-right: 10%;
-    height: 95vh;
-  }
+      /* Hero Section */
+      .hero {
+        padding-left: 15%;
+        padding-right: 15%;
+        height: 95vh;
+      }
 
-  .hero-content {
-    display: flex;
-    align-items: center;
-    gap: 3%;
-    flex-wrap: wrap;
-    width: 80%;
-    max-width: none;   /* allow full percentage */
-  }
+      .hero-content {
+        max-width: none;
+        gap: 4rem;
+      }
 
-  .profile-img {
-    width: 40%;       /* scales with container */
-    height: auto;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 0.8rem solid #00aaff;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.4s ease;
-  }
+      .profile-img {
+        width: 300px;
+        height: 300px;
+      }
 
-  .intro {
-    width: 55%;       /* scales with container */
-    max-width: none;
-  }
+      .intro h1 {
+        font-size: 3.2rem;
+      }
 
-  .intro h1 {
-    font-size: 3vw;   /* scales with viewport */
-  }
+      .intro p {
+        font-size: 1.25rem;
+      }
 
-  .intro p {
-    font-size: 1.2vw;
-  }
+      .btn {
+        padding: 1rem 2rem;
+        font-size: 1.05rem;
+      }
 
-  .btn {
-    padding: 1vw 2vw;
-    font-size: 1vw;
-  }
+      /* About Preview */
+      .about-preview {
+        padding-left: 15%;
+        padding-right: 15%;
+      }
 
-  /* --- About Preview --- */
-  .about-preview {
-    width: 80%;
-    margin: 0 auto;
-    padding: 2rem 0;
-  }
+      .about-preview h2 {
+        font-size: 2.6rem;
+      }
 
-  .about-preview h2 {
-    font-size: 2.5vw;
-  }
+      .about-preview p {
+        font-size: 1.25rem;
+      }
 
-  .about-preview p {
-    font-size: 1.2vw;
-  }
+      /* Skills Section */
+      .skills {
+        padding-left: 15%;
+        padding-right: 15%;
+      }
 
-  /* --- Skills Section --- */
-  .skills {
-    width: 80%;
-    margin: 0 auto;
-    padding: 2rem 0;
-  }
+      .skills h2 {
+        font-size: 2.6rem;
+        margin-bottom: 2.5rem;
+      }
 
-  .skills h2 {
-    font-size: 2.5vw;
-    margin-bottom: 2rem;
-  }
+      .skills-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2.5rem;
+      }
 
-  .skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2%;
-  }
+      .skill-card {
+        flex: 1 1 30%;
+        max-width: 30%;
+        padding: 2.5rem;
+      }
 
-  .skill-card {
-    flex: 1 1 30%;       /* three per row */
-    max-width: 30%;
-    padding: 2.5%;
-    font-size: 1vw;
-  }
+      .skill-card h3 {
+        font-size: 1.3rem;
+      }
 
-  .skill-card h3 {
-    font-size: 1.3vw;
-    margin-bottom: 0.5rem;
-  }
+      .skill-card p {
+        font-size: 1.15rem;
+      }
 
-  /* --- Projects Preview --- */
-  .projects-preview {
-    width: 80%;
-    margin: 0 auto;
-    padding: 2rem 0;
-  }
+      /* Projects Preview */
+      .projects-preview {
+        padding-left: 15%;
+        padding-right: 15%;
+      }
 
-  .projects-preview h2 {
-    font-size: 2.5vw;
-    margin-bottom: 2rem;
-  }
+      .projects-preview h2 {
+        font-size: 2.6rem;
+        margin-bottom: 2.5rem;
+      }
 
-  .project-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 2%;
-  }
+      .project-grid {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2.5rem;
+      }
 
-  .project {
-    flex: 1 1 30%;
-    max-width: 30%;
-    padding: 2%;
-    font-size: 1vw;
-  }
+      .project {
+        flex: 1 1 30%;
+        max-width: 30%;
+        padding: 2rem;
+      }
 
-  .project h3 {
-    font-size: 1.2vw;
-  }
+      .project h3 {
+        font-size: 1.2rem;
+      }
 
-  .project p {
-    font-size: 0.95vw;
-  }
+      .project p {
+        font-size: 1.05rem;
+      }
 
-  /* --- Call to Action --- */
-  .cta {
-    width: 80%;
-    margin: 0 auto;
-    padding: 4rem 0;
-    text-align: center;
-  }
+      /* Call to Action */
+      .cta {
+        padding-left: 15%;
+        padding-right: 15%;
+        padding-top: 5rem;
+        padding-bottom: 5rem;
+      }
 
-  .cta h2 {
-    font-size: 2.5vw;
-  }
+      .cta h2 {
+        font-size: 2.6rem;
+      }
 
-  .cta p {
-    font-size: 1.2vw;
-  }
+      .cta p {
+        font-size: 1.25rem;
+      }
 
-  .cta a {
-    padding: 1vw 2vw;
-    font-size: 1vw;
-  }
-
-}
-
-
+      .cta a {
+        padding: 1rem 2rem;
+        font-size: 1.05rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -581,6 +563,5 @@
       hamburger.classList.toggle('open');
     });
   </script>
-
 </body>
 </html>
