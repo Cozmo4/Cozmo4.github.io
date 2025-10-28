@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brady Merten | Home</title>
+  <title>Brady Merten | About Me</title>
   <style>
-    /* Reset */
+    /* Reset & Base */
     * {
       margin: 0;
       padding: 0;
@@ -14,43 +14,45 @@
 
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      line-height: 1.6;
-      background: #f9f9f9;
       color: #333;
-      scroll-behavior: smooth;
+      background: #f9f9f9;
+      line-height: 1.6;
     }
 
     /* Navbar */
     header {
-      background: #1f1f1f;
+      background: #1a1a1a;
+      color: #fff;
+      padding: 1rem 0;
       position: sticky;
       top: 0;
       z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
 
     nav {
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       width: 90%;
       margin: auto;
-      padding: 1rem 0;
+      max-width: 1100px;
+      position: relative;
     }
 
     .logo {
-      color: #fff;
       font-size: 1.5rem;
-      font-weight: bold;
+      letter-spacing: 1px;
     }
 
     .nav-links {
-      display: flex;
-      gap: 1.5rem;
       list-style: none;
+      display: flex;
+      gap: 1.2rem;
     }
 
     .nav-links a {
-      color: #fff;
+      color: white;
       text-decoration: none;
       font-weight: 500;
       transition: color 0.3s;
@@ -65,8 +67,8 @@
     .hamburger {
       display: none;
       flex-direction: column;
-      gap: 5px;
       cursor: pointer;
+      gap: 5px;
     }
 
     .hamburger div {
@@ -76,97 +78,89 @@
       transition: 0.3s;
     }
 
-    /* Hero */
-    .hero {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 90vh;
-      text-align: center;
-      padding: 2rem;
-      background: linear-gradient(to right, #e3f2fd, #f9f9f9);
-    }
-
-    .hero img {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      border: 4px solid #00aaff;
-      margin-bottom: 1.5rem;
-      transition: transform 0.3s ease;
-    }
-
-    .hero img:hover {
-      transform: scale(1.05);
-    }
-
-    .hero h1 {
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero h1 span {
-      color: #00aaff;
-    }
-
-    .hero p {
-      max-width: 600px;
-      margin: 0 auto 1.5rem;
-    }
-
-    .btn {
-      padding: 0.8rem 1.5rem;
-      background: #00aaff;
-      color: #fff;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: 500;
-      transition: transform 0.3s ease;
-    }
-
-    .btn:hover {
-      transform: scale(1.05);
-    }
-
-    /* Sections */
-    section {
-      padding: 5rem 1rem;
-      text-align: center;
-    }
-
-    section h2 {
-      color: #00aaff;
-      font-size: 2rem;
-      margin-bottom: 1rem;
-    }
-
-    section p {
-      max-width: 700px;
-      margin: 0 auto 2rem;
-      font-size: 1rem;
-    }
-
-    /* Grid */
-    .grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 2rem;
-    }
-
-    .card {
+    /* Main Paragraph Section (Intro + Text) */
+    .about-main-text {
+      max-width: 900px;
+      margin: 5rem auto;
+      padding: 4rem 3rem;
+      font-size: 1.3rem;
+      color: #444;
+      line-height: 1.8;
       background: #fff;
-      padding: 1.5rem;
-      border-radius: 12px;
-      width: 250px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
     }
 
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    .about-main-text h1 {
+      font-size: 2.5rem;
+      color: #1a1a1a;
+      margin-bottom: 1rem;
+    }
+
+    .about-main-text h1 span {
+      color: #00aaff;
+    }
+
+    .about-main-text p {
+      max-width: 800px;
+      margin: 0.8rem auto;
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    /* About Content Sections */
+    .about-section {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 3rem;
+      padding: 2rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .about-section:nth-child(even) {
+      flex-direction: row-reverse;
+      background: #f0f8ff;
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 280px;
+    }
+
+    .about-text h2 {
+      color: #00aaff;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .about-text p {
+      font-size: 1.25rem;
+      color: #444;
+    }
+
+    .about-img {
+      flex: 1;
+      min-width: 280px;
+      text-align: center;
+    }
+
+    .about-img img {
+      width: 100%;
+      max-width: 400px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+      object-fit: cover;
+    }
+
+    .caption {
+      font-size: 0.95rem;
+      color: #666;
+      margin-top: 0.6rem;
+      font-style: italic;
     }
 
     /* Footer */
@@ -174,120 +168,143 @@
       background: #1a1a1a;
       color: #ccc;
       text-align: center;
-      padding: 2rem 1rem;
+      padding: 2.5rem 1rem;
+      margin-top: 3rem;
+    }
+
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+
+    footer .socials {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+    }
+
+    footer a {
+      color: #00aaff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    footer a:hover {
+      color: white;
     }
 
     /* Responsive */
     @media (max-width: 768px) {
+      .about-section {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .about-img img {
+        max-width: 300px;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
       .nav-links {
         display: none;
-        flex-direction: column;
-        background: #1f1f1f;
         position: absolute;
         top: 60px;
         right: 0;
+        background: #1a1a1a;
+        flex-direction: column;
         width: 100%;
+        text-align: center;
+        padding: 1rem 0;
       }
 
       .nav-links.active {
         display: flex;
       }
 
-      .hamburger {
-        display: flex;
+      .nav-links li {
+        margin: 10px 0;
+      }
+
+      nav {
+        flex-wrap: wrap;
       }
     }
-
+    @media (min-width: 1201px) {
+     body{
+      background-color: blue; 
+    }
   </style>
 </head>
 <body>
 
-  <!-- Navbar -->
   <header>
     <nav>
-      <div class="logo">Brady Merten</div>
+      <h2 class="logo">Brady Merten</h2>
       <div class="hamburger" id="hamburger">
         <div></div>
         <div></div>
         <div></div>
       </div>
       <ul class="nav-links" id="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="about.html">About Me</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html" class="active">About Me</a></li>
         <li><a href="statement.html">Academic Statement</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="portfolio.html">Written work/Portfolio</a></li>
         <li><a href="resume.html">Resume</a></li>
-        <li><a href="contact.html">Contact</a></li>
+        <li><a href="contact.html">Contact Information</a></li>
       </ul>
     </nav>
   </header>
 
-  <!-- Hero -->
-  <section class="hero">
-    <img src="w.png" alt="Brady Merten">
-    <h1>Hello, I'm <span>Brady Merten</span></h1>
-    <p>Welcome to my portfolio! I’m passionate about mechanical engineering and web development. Explore my projects, skills, and achievements.</p>
-    <a href="portfolio.html" class="btn">View My Work</a>
+  <!-- Combined Intro + Main Paragraph -->
+  <section class="about-main-text">
+    <h1>Get to Know <span>Me</span></h1>
+
+    <p>
+      I am a hard working and dedicated person who was born and raised in Louisville Kentucky. Currrently I do run track and cross country, as well as play soccer and a few sports on the side. During the year I enjoy traveling either for sports or for vacation due to the change of senary. Additionally I am a person who trys to understand and imagine how things work which has left me spending the time when I'm not playing sports or traveling designing, creating projects whether it is a website or a 3d prints. Ultimately all of my travels and hobbies have shaped me into an an outgoing, adventures person.
+    </p>
   </section>
 
-  <!-- About Preview -->
-  <section>
-    <h2>About Me</h2>
-    <p>I’m Brady Merten, passionate about web development, mechanical engineering, and robotics. Outside of school, I enjoy sports and running cross country.</p>
-    <a href="about.html" class="btn">Learn More</a>
-  </section>
-
-  <!-- Skills -->
-  <section>
-    <h2>My Skills</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Frontend Development</h3>
-        <p>Experience with HTML, CSS, and JavaScript to build responsive websites.</p>
-      </div>
-      <div class="card">
-        <h3>Java Development</h3>
-        <p>Developed GUI applications for personal and school projects.</p>
-      </div>
-      <div class="card">
-        <h3>3D Printing & Prototyping</h3>
-        <p>Designed and printed functional 3D models for science fairs and projects.</p>
-      </div>
-      <div class="card">
-        <h3>Academic Skills</h3>
-        <p>Teamwork, time management, and perseverance developed through school and projects.</p>
-      </div>
+  <!-- Sports Section -->
+  <section class="about-section">
+    <div class="about-text">
+      <h2>Sports</h2>
+      <p>Throughout my life I have played many different sports. Early on I started by playing baseball, soccer, and basketball, but ultimately fell in love with soccer which led me to play for almost 13 years for both my school and club. Last year I started running cross country and track to take on a new challenge.</p>
+    </div>
+    <div class="about-img">
+      <img src="soccer.JPG" alt="Brady playing soccer or running">
+      <p class="caption">Brady playing soccer, 2015</p>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section>
-    <h2>Featured Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Vegetarian Restaurant Website</h3>
-        <p>Created a fully responsive website with my team for TSA competitions.</p>
-      </div>
-      <div class="card">
-        <h3>Hearing Loss Study</h3>
-        <p>Experiment to test if attending football games caused long-term hearing loss.</p>
-      </div>
-      <div class="card">
-        <h3>Sports Event Research</h3>
-        <p>Analyzed effects of hosting major sporting events on local communities.</p>
-      </div>
+  <!-- Engineering Section -->
+  <section class="about-section">
+    <div class="about-text">
+      <h2>Engineering</h2>
+      <p>Throughout my life I have always loved designing and building things whether it was Legos, robot, or other projects. I really fell in love with it when I started doing robotics in elementary school and throughout middle school. During high school I continued to learn more about enginering from class and competing in TSA competitions and hope to pursue a career in mechanical engineering.</p>
     </div>
-    <a href="portfolio.html" class="btn" style="margin-top:2rem;">See All Projects</a>
+    <div class="about-img">
+      <img src="web.jpg" alt="Brady working on a computer project">
+      <p class="caption">Vegan website for TSA nationals, 2025</p>
+    </div>
   </section>
 
-  <!-- Call to Action -->
-  <section>
-    <h2>Contact Me</h2>
-    <p>If you have questions or want to connect, feel free to reach out anytime.</p>
-    <a href="contact.html" class="btn">Contact Me</a>
+  <!-- Travel Section -->
+  <section class="about-section">
+    <div class="about-text">
+      <h2>Travel</h2>
+      <p>Throughout my life, I have always enjoyed traveling, whether it’s an hour down the road to go on a hike, to another state, or even another country. Traveling has exposed me to experiences I don’t encounter in my everyday life—from new landscapes to local traditions. It has introduced me to new ways of thinking and problem solving, and given me new ideas to try and address.</p>
+    </div>
+    <div class="about-img">
+      <img src="trip.jpeg" alt="Brady traveling or exploring">
+      <p class="caption">Carliforna vacation, 2022</p>
+    </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Brady Merten — All Rights Reserved</p>
   </footer>
@@ -298,9 +315,9 @@
 
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('active');
+      hamburger.classList.toggle('open');
     });
   </script>
 
 </body>
 </html>
-
