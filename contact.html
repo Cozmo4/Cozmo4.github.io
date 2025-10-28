@@ -212,70 +212,71 @@ footer {
 /* Large screens above 1600px */
 /* Large screens above 1400px */
 @media (min-width: 1400px) {
-  /* Main contact sections centered with side space */
+  /* Contact section scaling */
   .contact-section {
-    max-width: none;
-    margin-left: 20%;
-    margin-right: 20%;
-    padding: 4% 3%; /* % instead of rem for scalable spacing */
-    font-size: 1.25rem;
+    width: 60%;           /* takes 60% of screen */
+    margin: 4% auto;      /* centered */
+    padding: 3% 2%;       /* spacing scales with viewport */
+    font-size: clamp(1rem, 1vw + 0.5rem, 2rem); /* fluid font */
   }
 
   .contact-section h1 {
-    font-size: 3.43vw; /* was 3rem */
-    margin-bottom: 2%; /* scaled spacing */
+    font-size: clamp(2.5rem, 3vw + 1rem, 5rem); /* grows for ultra-wide screens */
+    margin-bottom: 2%;
   }
 
   .contact-section p {
-    font-size: 1.37vw; /* was 1.2rem */
-    margin-bottom: 3%; /* scaled spacing */
+    font-size: clamp(1.2rem, 1.5vw + 0.5rem, 3rem);
+    margin-bottom: 2.5%;
   }
 
   form {
-    gap: 2.5%; /* scales with screen width */
+    gap: 2.5%;
   }
 
   label {
-    font-size: 1.1vw;
+    font-size: clamp(1rem, 1.2vw + 0.3rem, 2rem);
   }
 
   input,
   textarea {
     width: 100%;
-    padding: 1.2% 1.5%; /* scales with screen */
-    font-size: 1.1vw;
+    padding: clamp(0.8rem, 1vw + 0.2rem, 2rem);
+    font-size: clamp(1rem, 1vw + 0.3rem, 1.8rem);
   }
 
   button {
-    padding: 1.5% 3%; /* scalable padding */
-    font-size: 1.2vw;
-    border-radius: 3%; /* proportional rounding */
+    padding: clamp(0.8rem, 1vw + 0.2rem, 2rem) clamp(1.5rem, 2vw + 0.5rem, 4rem);
+    font-size: clamp(1rem, 1.2vw + 0.3rem, 2rem);
+    border-radius: 2%;
   }
 
   .contact-info p {
-    font-size: 1.1vw;
+    font-size: clamp(1rem, 1vw + 0.3rem, 2rem);
     margin-bottom: 1.5%;
   }
 
   footer {
-    padding: 2% 1%;
-    font-size: 1vw;
+    padding: clamp(1rem, 1vw, 3rem) 1%;
+    font-size: clamp(1rem, 0.8vw + 0.2rem, 1.8rem);
   }
 
   /* Navbar scaling */
   nav {
-    width: 90%;
-    padding: 1.5% 0; /* scales navbar padding */
+    width: 100%;          /* full width */
+    padding: clamp(1rem, 1vw, 3rem) 5%; 
+    margin: 0;
   }
 
   .nav-links a {
-    font-size: 1.1vw;
+    font-size: clamp(1rem, 1vw + 0.5rem, 2rem);
   }
 
   .logo {
-    font-size: 1.5vw;
+    font-size: clamp(1.5rem, 2vw + 0.5rem, 3rem);
   }
 }
+
 
 
 
