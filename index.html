@@ -329,37 +329,44 @@
     }
 
     /* --- Media Query for screens >= 1400px --- */
-    @media (min-width: 1400px) {
+   
+      @media (min-width: 1400px) {
 
-      /* Hero Section */
-      .hero {
-        padding-left: 15%;
-        padding-right: 15%;
-        height: 95vh;
-      }
+  /* Hero Section */
+  .hero {
+    padding-left: 10%;
+    padding-right: 10%;
+    height: 95vh;
+  }
 
-      .hero-content {
-        max-width: none;
-        gap: 4rem;
-      }
+  .hero-content {
+    max-width: 100%;
+    width: 80%;
+    gap: 3%;
+  }
 
-      .profile-img {
-        width: 300px;
-        height: 300px;
-      }
+  .profile-img {
+    width: 30%; /* image scales with container */
+    min-width: 250px;
+    aspect-ratio: 1 / 1;
+  }
 
-      .intro h1 {
-        font-size: 3.2rem;
-      }
+  .intro {
+    width: 65%; /* text container scales with image */
+  }
 
-      .intro p {
-        font-size: 1.25rem;
-      }
+  .intro h1 {
+    font-size: 3.5%; /* percentage of container */
+  }
 
-      .btn {
-        padding: 1rem 2rem;
-        font-size: 1.05rem;
-      }
+  .intro p {
+    font-size: 1.5%; /* percentage of container */
+  }
+
+  .btn {
+    padding: 1% 2%;
+    font-size: 1.2%; /* scales with container */
+  }
 
       /* About Preview */
       .about-preview {
