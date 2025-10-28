@@ -36,6 +36,7 @@
       justify-content: space-between;
       width: 90%;
       margin: auto;
+      max-width: 1100px;
       position: relative;
     }
 
@@ -79,6 +80,7 @@
 
     /* Contact Section */
     .contact-section {
+      max-width: 700px;
       margin: 4rem auto;
       background: white;
       padding: 2rem;
@@ -88,14 +90,20 @@
 
     .contact-section h1 {
       text-align: center;
-      color: #00aaff;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
+      color: black;
+    }
+
+    .contact-section h1 span {
+      color: #00aaff;
     }
 
     .contact-section p {
       text-align: center;
+      font-size: 1.1rem;
       margin-bottom: 2rem;
-      color: #555;
+      color: #444;
     }
 
     form {
@@ -218,7 +226,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Me</a></li>
         <li><a href="statement.html">Academic Statement</a></li>
-        <li><a href="portfolio.html">Portfolio of Work</a></li>
+        <li><a href="portfolio.html">Written work/Portfolio</a></li>
         <li><a href="resume.html">Resume</a></li>
         <li><a href="contact.html" class="active">Contact Information</a></li>
       </ul>
@@ -226,7 +234,7 @@
   </header>
 
   <section class="contact-section">
-    <h1>Contact Form</h1>
+    <h1><span style="color:black;">Contact</span> <span style="color:#00aaff;">Form</span></h1>
     <p>Have a question or want to connect? Fill out the form below and I’ll get back to you as soon as I can.</p>
 
     <form action="#" method="post">
@@ -244,7 +252,7 @@
   </section>
 
   <section class="contact-section">
-    <h1>Contact Me Directly</h1>
+    <h1><span style="color:black;">Contact</span> <span style="color:#00aaff;">Me Directly</span></h1>
     <p>Have a question and want to contact me directly? Use one of the following methods:</p>
 
     <div class="contact-info">
