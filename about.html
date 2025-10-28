@@ -241,8 +241,8 @@
   body > :not(header):not(footer) {
     margin-left: 15%;
     margin-right: 15%;
-    max-width: none;  /* remove any max-width */
-    width: auto;      /* allow content to expand */
+    max-width: none;
+    width: auto;
     padding-left: 0;
     padding-right: 0;
   }
@@ -251,6 +251,7 @@
   nav, footer {
     width: 100%;
     max-width: none;
+    margin: 0;
   }
 
   /* About sections fully expand */
@@ -260,13 +261,20 @@
     width: 100%;
   }
 
-  /* Images scale to 60% of their container */
+  /* Images scale to 60% of their container and center */
+  .about-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .about-img img {
     max-width: 60%;
     width: 60%;
+    height: auto; /* maintain aspect ratio */
   }
 
-  /* Contact section adjustments if applicable */
+  /* Contact section adjustments */
   .contact-section {
     max-width: none;
     width: 100%;
