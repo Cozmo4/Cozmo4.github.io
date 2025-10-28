@@ -233,6 +233,47 @@
         flex-wrap: wrap;
       }
     }
+    /* Large screens above 1600px */
+@media (min-width: 1600px) {
+  nav {
+    width: 95%;
+    max-width: none; /* remove max-width */
+    margin: auto;
+  }
+
+  .about-main-text {
+    max-width: none;
+    padding: 6rem 4rem; /* scale up padding */
+    font-size: 1.5rem; /* scale up text */
+  }
+
+  .about-section {
+    max-width: none;
+    gap: 4rem; /* scale spacing between sections */
+    padding: 3rem 4rem; /* scale padding */
+  }
+
+  .about-text h2 {
+    font-size: 2.5rem; /* scale headings */
+  }
+
+  .about-text p {
+    font-size: 1.4rem; /* scale paragraph text */
+  }
+
+  .about-img img {
+    max-width: 500px; /* scale images proportionally */
+  }
+
+  .about-main-text h1 {
+    font-size: 3rem; /* scale intro heading */
+  }
+
+  footer {
+    padding: 3rem 2rem; /* scale footer padding */
+  }
+}
+
   </style>
 </head>
 <body>
