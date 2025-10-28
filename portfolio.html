@@ -223,6 +223,65 @@
         font-size: 1.1rem;
       }
     }
+    /* Large screens above 1600px */
+@media (min-width: 1600px) {
+  /* Nav and footer full width */
+  nav, footer {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding-left: 5%; /* optional internal padding */
+    padding-right: 5%;
+  }
+
+  /* All other main content sections get 15% horizontal padding */
+  body > :not(header):not(footer) {
+    padding-left: 15%;
+    padding-right: 15%;
+  }
+
+  /* Intro box scaling */
+  .portfolio-intro-box {
+    max-width: none;
+    padding: 4rem 0; /* vertical padding only, horizontal handled by 15% */
+    font-size: 1.3rem;
+  }
+
+  .portfolio-intro-box h1 {
+    font-size: 3.2rem;
+  }
+
+  .portfolio-intro-box p {
+    font-size: 1.3rem;
+  }
+
+  /* Projects grid scaling */
+  .projects-grid {
+    max-width: none;
+    gap: 4rem;
+  }
+
+  .project-card {
+    padding: 2.5rem;
+  }
+
+  .project-card h3 {
+    font-size: 2rem;
+  }
+
+  .project-card p {
+    font-size: 1.15rem;
+  }
+
+  .project-card img, .project-card iframe {
+    height: 500px;
+  }
+
+  footer {
+    padding: 3rem 1rem;
+  }
+}
+
   </style>
 </head>
 <body>
