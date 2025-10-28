@@ -28,7 +28,7 @@
     }
 
     main {
-      flex: 1; /* this allows the main content to grow and push footer down */
+      flex: 1; /* allows main content to grow and push footer down */
     }
 
     /* Navbar */
@@ -91,13 +91,13 @@
 
     /* Statement Section */
     .statement-content {
-      width: 80%;
+      width: 85%; /* increased width for extra margin */
       margin: 5vh auto;
-      padding: 3vh 2vw;
+      padding: 3vh 2.5vw; /* extra horizontal padding */
       background: #fff;
       border-radius: 1vw;
       box-shadow: 0 0.5vh 2vh rgba(0, 0, 0, 0.1);
-      text-align: left;
+      text-align: center; /* center content */
       font-size: 1.2vw;
       line-height: 2;
     }
@@ -106,6 +106,7 @@
       font-size: 3vw;
       color: #1a1a1a;
       margin-bottom: 2vh;
+      text-align: center; /* center heading */
     }
 
     .statement-content h1 span {
@@ -140,14 +141,8 @@
 
     /* Responsive */
     @media (max-width: 1024px) {
-      body {
-        font-size: 1.5vw;
-      }
-
-      .logo {
-        font-size: 3vw;
-      }
-
+      body { font-size: 1.5vw; }
+      .logo { font-size: 3vw; }
       .nav-links {
         display: none;
         flex-direction: column;
@@ -160,56 +155,28 @@
         left: 0;
         padding: 2vh 0;
       }
-
-      .nav-links.active {
-        display: flex;
-      }
-
-      .hamburger {
-        display: flex;
-      }
-
+      .nav-links.active { display: flex; }
+      .hamburger { display: flex; }
       .statement-content {
         width: 90%;
         padding: 3vh 4vw;
         font-size: 1.5vw;
       }
-
-      .statement-content h1 {
-        font-size: 4vw;
-      }
-
-      .statement-content p {
-        font-size: 1.5vw;
-      }
+      .statement-content h1 { font-size: 4vw; }
+      .statement-content p { font-size: 1.5vw; }
     }
 
     @media (max-width: 600px) {
-      body {
-        font-size: 2.5vw;
-      }
-
-      .logo {
-        font-size: 4vw;
-      }
-
-      .nav-links a {
-        font-size: 3vw;
-      }
-
+      body { font-size: 2.5vw; }
+      .logo { font-size: 4vw; }
+      .nav-links a { font-size: 3vw; }
       .statement-content {
         width: 95%;
         padding: 4vh 5vw;
         font-size: 2.5vw;
       }
-
-      .statement-content h1 {
-        font-size: 5vw;
-      }
-
-      .statement-content p {
-        font-size: 2.5vw;
-      }
+      .statement-content h1 { font-size: 5vw; }
+      .statement-content p { font-size: 2.5vw; }
     }
   </style>
 </head>
