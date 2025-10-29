@@ -20,7 +20,7 @@
       display: flex;
       flex-direction: column;
       min-height: 100vh;
-      font-size: 1vw; /* decreased text size */
+      font-size: 16px; /* stable base font */
     }
 
     main { flex: 1; }
@@ -82,26 +82,27 @@
     /* Statement Section */
     .statement-content {
       background: white;
-      margin: 5vh 20%; /* expanded margins */
+      margin: 5vh auto;
       padding: 3%;
       border-radius: 1.5vw;
       box-shadow: 0 0.4vh 1.2vh rgba(0, 0, 0, 0.1);
       text-align: left;
+      max-width: 80vw; /* scales with screen width */
     }
 
     .statement-content h1 {
-      font-size: 2.5vw; /* smaller heading */
+      font-size: clamp(24px, 3vw, 60px);
       margin-bottom: 2vh;
       color: black;
-      text-align:center;
+      text-align: center;
     }
 
     .statement-content h1 span { color: #00aaff; }
 
     .statement-content p {
-      font-size: 1.1vw; /* smaller paragraph */
+      font-size: clamp(16px, 1.5vw, 24px);
       color: #444;
-      line-height: 2;
+      line-height: 1.8;
     }
 
     footer {
@@ -110,19 +111,21 @@
       text-align: center;
       padding: 2vh 0;
       margin-top: auto;
-      font-size: 1vw;
+      font-size: 1rem;
     }
 
     /* Responsive Styles */
     @media (max-width: 1000px) {
       .logo { font-size: 3.5vw; }
       .nav-links a { font-size: 2.5vw; }
+
       .statement-content {
-        margin: 4vh 15%; /* maintain 25% scaling roughly on smaller screens */
+        margin: 4vh 5%;
         padding: 5%;
       }
-      .statement-content h1 { font-size: 4.5vw; }
-      .statement-content p { font-size: 2vw; }
+
+      .statement-content h1 { font-size: clamp(20px, 4vw, 40px); }
+      .statement-content p { font-size: clamp(14px, 2vw, 20px); }
     }
 
     @media (max-width: 768px) {
@@ -141,10 +144,14 @@
       .nav-links.active { display: flex; }
       .nav-links li { margin: 1vh 0; }
       nav { flex-wrap: wrap; }
+
       .statement-content {
-        margin: 3vh 5%;
+        margin: 3vh 3%;
         padding: 5%;
       }
+
+      .statement-content h1 { font-size: clamp(18px, 5vw, 30px); }
+      .statement-content p { font-size: clamp(12px, 3vw, 18px); }
     }
   </style>
 </head>
