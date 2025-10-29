@@ -37,7 +37,7 @@
     header {
       background: #1f1f1f;
       color: #fff;
-      padding: 1rem 0;
+      padding: 1rem 15%;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -48,10 +48,7 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      width: 90%;
-      margin: auto;
-      max-width: 1100px;
-      position: relative;
+      width: 100%;
     }
 
     .logo {
@@ -95,27 +92,27 @@
     /* Hero Section */
     .hero {
       display: flex;
-      justify-content: center;
       align-items: center;
-      height: 92vh;
-      width: 100%;
+      justify-content: space-between;
+      padding: 5rem 15%;
+      height: 90vh;
       background: linear-gradient(to right, #e3f2fd, #f9f9f9);
-      padding: 4rem 2rem;
-      background-size: cover;
-      background-position: center;
+      gap: 4rem;
+      flex-wrap: wrap;
     }
 
     .hero-content {
       display: flex;
       align-items: center;
+      justify-content: space-between;
+      width: 100%;
       gap: 3rem;
       flex-wrap: wrap;
-      max-width: 1000px;
     }
 
     .profile-img {
-      width: 250px;
-      height: 250px;
+      width: 300px;
+      height: 300px;
       object-fit: cover;
       border-radius: 50%;
       border: 4px solid #00aaff;
@@ -128,11 +125,13 @@
     }
 
     .intro {
-      max-width: 550px;
+      flex: 1;
+      min-width: 300px;
+      max-width: 600px;
     }
 
     .intro h1 {
-      font-size: 2.6rem;
+      font-size: 2.8rem;
       margin-bottom: 1rem;
     }
 
@@ -141,7 +140,7 @@
     }
 
     .intro p {
-      font-size: 1.1rem;
+      font-size: 1.15rem;
       margin-bottom: 1.5rem;
     }
 
@@ -156,13 +155,12 @@
     }
 
     .btn:hover {
-      background: #00aaff;
       transform: scale(1.05);
     }
 
     /* Section Spacing */
     section {
-      padding: 6rem 1rem;
+      padding: 6rem 15%;
     }
 
     /* About Preview */
@@ -178,7 +176,7 @@
     }
 
     .about-preview p {
-      max-width: 750px;
+      max-width: 800px;
       margin: 0 auto 2rem;
       font-size: 1.1rem;
     }
@@ -269,7 +267,7 @@
       background: linear-gradient(to right, #e3f2fd, #f9f9f9);
       color: black;
       text-align: center;
-      padding: 4rem 1rem;
+      padding: 4rem 15%;
     }
 
     .cta h2 {
@@ -284,7 +282,7 @@
     }
 
     .cta a {
-      color:white;
+      color: white;
       background: #008ecc;
       padding: 0.9rem 1.8rem;
       border-radius: 25px;
@@ -302,35 +300,19 @@
       background: #1a1a1a;
       color: #ccc;
       text-align: center;
-      padding: 2.5rem 1rem;
+      padding: 2.5rem 15%;
       margin-top: 0;
-    }
-
-    footer p {
-      margin-bottom: 0.5rem;
-    }
-
-    footer .socials {
-      margin-top: 1rem;
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
     }
 
     footer a {
       color: #00aaff;
       text-decoration: none;
-      font-weight: 500;
       transition: color 0.3s;
     }
 
     footer a:hover {
       color: white;
     }
-
-    /* --- Media Query for screens >= 1400px --- */
-   
-
   </style>
 </head>
 <body>
@@ -361,7 +343,7 @@
       <img src="w.png" alt="Brady Merten" class="profile-img">
       <div class="intro">
         <h1>Hello, I'm <span>Brady Merten</span></h1>
-        <p>Welcome to my portfolio! I’m a student passionate about mechanical engineering and the process of turning ideas into real designs. Here you can learn more about me, explore my projects, achievements, and goals as I continue to grow and expand my learning</p>
+        <p>Welcome to my portfolio! I’m a student passionate about mechanical engineering and the process of turning ideas into real designs. Here you can learn more about me, explore my projects, achievements, and goals as I continue to grow and expand my learning.</p>
         <a href="portfolio.html" class="btn">View My Work</a>
       </div>
     </div>
@@ -370,7 +352,7 @@
   <!-- About Preview -->
   <section class="about-preview">
     <h2>About Me</h2>
-    <p>Hello I am Brady Merten, I have a passionate about web development, mechancial engineering, and robotics. Outside of school I enjoy playing sports, running cross country for my school</p>
+    <p>Hello, I’m Brady Merten. I’m passionate about web development, mechanical engineering, and robotics. Outside of school I enjoy playing sports and running cross country for my school.</p>
     <a href="about.html" class="btn">Learn More</a>
   </section>
 
@@ -383,12 +365,12 @@
         <p>I have experience using HTML, CSS, and JavaScript to create modern, responsive websites.</p>
       </div>
       <div class="skill-card">
-        <h3>Java development</h3>
-        <p>I have experince as a JAVA developer creating GUI for both personal use, as well as school proojects</p>
+        <h3>Java Development</h3>
+        <p>I have experience as a Java developer creating GUIs for both personal use and school projects.</p>
       </div>
       <div class="skill-card">
         <h3>3D Printing & Prototyping</h3>
-        <p>Experienced in designing and printing 3D models in order to create functional projcets for science fair, or personal projects.</p>
+        <p>Experienced in designing and printing 3D models to create functional projects for science fairs and personal work.</p>
       </div>
     </div>
   </section>
@@ -398,16 +380,16 @@
     <h2>Featured Projects</h2>
     <div class="project-grid">
       <div class="project">
-        <h3>Vegetarian restaurant website</h3>
-        <p>In a team we developed a fully responsive website vegeatirain restuaurant to compete at TSA regionals,states, and nationals.</p>
+        <h3>Vegetarian Restaurant Website</h3>
+        <p>In a team, we developed a fully responsive vegetarian restaurant website for TSA Regionals, States, and Nationals.</p>
       </div>
       <div class="project">
-        <h3>Long term hearing loss study</h3>
-        <p>I created a expeiment to determine if going to a football game caused permanat hearing loss</p>
+        <h3>Long-Term Hearing Loss Study</h3>
+        <p>I designed an experiment to determine whether attending football games can cause long-term hearing loss.</p>
       </div>
       <div class="project">
-        <h3>Effects of hosting major sports events</h3>
-        <p>I did in depth research on the effects that hosting a major sporting event has on the local community</p>
+        <h3>Effects of Hosting Major Sports Events</h3>
+        <p>I conducted in-depth research on how hosting major sporting events impacts local communities.</p>
       </div>
     </div>
     <a href="portfolio.html" class="btn" style="margin-top:2.5rem;">See All Projects</a>
@@ -415,8 +397,8 @@
 
   <!-- Call to Action -->
   <section class="cta">
-    <h2>Want to Reach out?</h2>
-    <p>If you have any questions, or want to connect feel free to contact me at anytime.</p>
+    <h2>Want to Reach Out?</h2>
+    <p>If you have any questions or want to connect, feel free to contact me anytime.</p>
     <a href="contact.html">Contact Me</a>
   </section>
 
@@ -428,7 +410,6 @@
   <script>
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('nav-links');
-
     hamburger.addEventListener('click', () => {
       navLinks.classList.toggle('active');
       hamburger.classList.toggle('open');
@@ -436,4 +417,3 @@
   </script>
 </body>
 </html>
-
