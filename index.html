@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Brady Merten | Home</title>
+  <title>My Portfolio | Home</title>
   <style>
     /* Reset & Base */
     * {
@@ -17,21 +17,31 @@
       color: #333;
       background: #f9f9f9;
       line-height: 1.6;
-      font-size: 1vw;
       scroll-behavior: smooth;
     }
 
-    main { flex: 1; }
+    section {
+      opacity: 0;
+      transform: translateY(40px);
+      animation: fadeInUp 0.8s ease forwards;
+    }
 
-    /* Navbar (Copied exactly from About page) */
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Navbar */
     header {
-      background: #1a1a1a;
+      background: #1f1f1f;
       color: #fff;
-      padding: 1.5vh 0;
+      padding: 1rem 0;
       position: sticky;
       top: 0;
       z-index: 1000;
-      box-shadow: 0 0.3vh 1vh rgba(0,0,0,0.3);
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     }
 
     nav {
@@ -40,38 +50,44 @@
       justify-content: space-between;
       width: 90%;
       margin: auto;
+      max-width: 1100px;
       position: relative;
     }
 
-    .logo { font-size: 2vw; letter-spacing: 0.1vw; }
+    .logo {
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
 
     .nav-links {
       list-style: none;
       display: flex;
-      gap: 2vw;
+      gap: 1.2rem;
     }
 
     .nav-links a {
       color: white;
       text-decoration: none;
       font-weight: 500;
-      font-size: 1.2vw;
       transition: color 0.3s;
     }
 
     .nav-links a:hover,
-    .nav-links a.active { color: #00aaff; }
+    .nav-links a.active {
+      color: #00aaff;
+    }
 
+    /* Hamburger */
     .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
-      gap: 0.6vh;
+      gap: 5px;
     }
 
     .hamburger div {
-      width: 2.3vw;
-      height: 0.4vh;
+      width: 25px;
+      height: 3px;
       background: white;
       transition: 0.3s;
     }
@@ -81,213 +97,224 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 90vh;
+      height: 92vh;
+      width: 100%;
       background: linear-gradient(to right, #e3f2fd, #f9f9f9);
-      padding: 5vh 15%;
-      flex-wrap: wrap;
-      gap: 5vh;
+      padding: 4rem 2rem;
+      background-size: cover;
+      background-position: center;
     }
 
     .hero-content {
       display: flex;
       align-items: center;
-      justify-content: center;
+      gap: 3rem;
       flex-wrap: wrap;
-      gap: 4vw;
-      width: 100%;
+      max-width: 1000px;
     }
 
     .profile-img {
-      width: 20vw;
-      height: 20vw;
-      min-width: 180px;
+      width: 250px;
+      height: 250px;
       object-fit: cover;
       border-radius: 50%;
-      border: 0.4vw solid #00aaff;
-      box-shadow: 0 0.5vw 1.5vw rgba(0, 0, 0, 0.1);
+      border: 4px solid #00aaff;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
       transition: transform 0.4s ease;
     }
 
-    .profile-img:hover { transform: scale(1.05); }
+    .profile-img:hover {
+      transform: scale(1.05);
+    }
 
     .intro {
-      flex: 1;
-      min-width: 300px;
+      max-width: 550px;
     }
 
     .intro h1 {
-      font-size: 2.8vw;
-      margin-bottom: 1.5vh;
+      font-size: 2.6rem;
+      margin-bottom: 1rem;
     }
 
-    .intro h1 span { color: #00aaff; }
+    .intro h1 span {
+      color: #00aaff;
+    }
 
     .intro p {
-      font-size: 1.2vw;
-      margin-bottom: 2vh;
+      font-size: 1.1rem;
+      margin-bottom: 1.5rem;
     }
 
     .btn {
       display: inline-block;
-      padding: 1vh 2vw;
+      padding: 0.8rem 1.5rem;
       background: #00aaff;
       color: white;
-      border-radius: 2vw;
+      border-radius: 25px;
       text-decoration: none;
       transition: all 0.3s ease;
     }
 
     .btn:hover {
-      background: #008ecc;
+      background: #00aaff;
       transform: scale(1.05);
     }
 
-    /* Flexible Section Base */
+    /* Section Spacing */
     section {
-      margin: 10vh 15%;
-      padding: 4vh 0;
-      border-radius: 1vw;
-      background: white;
-      box-shadow: 0 0.4vh 1.2vh rgba(0,0,0,0.1);
-      text-align: center;
+      padding: 6rem 1rem;
     }
 
     /* About Preview */
+    .about-preview {
+      background: white;
+      text-align: center;
+    }
+
     .about-preview h2 {
       color: #00aaff;
-      font-size: 2.3vw;
-      margin-bottom: 1vh;
+      margin-bottom: 1rem;
+      font-size: 2.2rem;
     }
 
     .about-preview p {
-      font-size: 1.1vw;
-      max-width: 60%;
-      margin: auto;
-      margin-bottom: 2vh;
+      max-width: 750px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
     }
 
-    /* Skills Section */
+    /* Skills */
     .skills {
       background: #f0f8ff;
+      text-align: center;
     }
 
     .skills h2 {
       color: #00aaff;
-      font-size: 2.3vw;
-      margin-bottom: 3vh;
+      margin-bottom: 2rem;
+      font-size: 2.2rem;
     }
 
     .skills-grid {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 3vw;
-      width: 100%;
+      flex-wrap: wrap;
+      gap: 2.5rem;
     }
 
     .skill-card {
-      width: 30%;
-      min-width: 280px;
       background: white;
-      padding: 2vw;
-      border-radius: 1.2vw;
-      box-shadow: 0 0.4vw 1vw rgba(0,0,0,0.1);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      width: 260px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .skill-card:hover {
-      transform: translateY(-0.5vw);
-      box-shadow: 0 0.8vw 2vw rgba(0,0,0,0.15);
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
     .skill-card h3 {
       color: #00aaff;
-      font-size: 1.5vw;
-      margin-bottom: 1vh;
+      margin-bottom: 0.5rem;
     }
 
-    .skill-card p {
-      font-size: 1vw;
+    /* Projects Preview */
+    .projects-preview {
+      background: white;
+      text-align: center;
     }
 
-    /* Projects Section */
     .projects-preview h2 {
       color: #00aaff;
-      font-size: 2.3vw;
-      margin-bottom: 3vh;
+      margin-bottom: 1rem;
+      font-size: 2.2rem;
     }
 
     .project-grid {
       display: flex;
-      flex-wrap: wrap;
       justify-content: center;
-      gap: 3vw;
-      width: 100%;
+      flex-wrap: wrap;
+      gap: 2.5rem;
     }
 
     .project {
-      width: 30%;
-      min-width: 280px;
       background: #f9f9f9;
-      border-radius: 1.2vw;
-      padding: 2vw;
-      box-shadow: 0 0.4vw 1vw rgba(0,0,0,0.1);
+      border-radius: 12px;
+      padding: 1.8rem;
+      width: 300px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
       text-align: left;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .project:hover {
-      transform: translateY(-0.5vw);
-      box-shadow: 0 0.8vw 2vw rgba(0,0,0,0.15);
+      transform: translateY(-8px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
     }
 
     .project h3 {
       color: #008ecc;
-      font-size: 1.4vw;
-      margin-bottom: 0.5vh;
+      margin-bottom: 0.5rem;
     }
 
     .project p {
-      font-size: 1vw;
+      font-size: 0.95rem;
     }
 
-    /* CTA Section */
+    /* Call to Action */
     .cta {
       background: linear-gradient(to right, #e3f2fd, #f9f9f9);
-      color: #000;
+      color: black;
+      text-align: center;
+      padding: 4rem 1rem;
     }
 
     .cta h2 {
-      font-size: 2.5vw;
-      margin-bottom: 1vh;
+      font-size: 2.3rem;
+      margin-bottom: 1rem;
     }
 
     .cta p {
-      font-size: 1.2vw;
-      max-width: 60%;
-      margin: auto;
-      margin-bottom: 2vh;
+      max-width: 700px;
+      margin: 0 auto 2rem;
+      font-size: 1.1rem;
     }
 
     .cta a {
-      background: #00aaff;
-      color: white;
-      padding: 1vh 2vw;
-      border-radius: 2vw;
+      color:white;
+      background: #008ecc;
+      padding: 0.9rem 1.8rem;
+      border-radius: 25px;
       text-decoration: none;
       font-weight: 600;
       transition: all 0.3s ease;
     }
 
-    .cta a:hover { transform: scale(1.05); }
+    .cta a:hover {
+      transform: scale(1.05);
+    }
 
     /* Footer */
     footer {
       background: #1a1a1a;
       color: #ccc;
       text-align: center;
-      padding: 3vh 0;
-      margin-top: 5vh;
+      padding: 2.5rem 1rem;
+      margin-top: 0;
+    }
+
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+
+    footer .socials {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
     }
 
     footer a {
@@ -297,54 +324,18 @@
       transition: color 0.3s;
     }
 
-    footer a:hover { color: white; }
-
-    /* Mobile Responsive */
-    @media (max-width: 1000px) {
-      .hero {
-        flex-direction: column;
-        height: auto;
-        padding: 10vh 10%;
-      }
-
-      .intro h1 { font-size: 5vw; }
-      .intro p { font-size: 2vw; }
-      .btn { padding: 1.5vh 4vw; }
-
-      .skills-grid, .project-grid {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .skill-card, .project {
-        width: 80%;
-      }
-
-      .logo { font-size: 3.5vw; }
-      .nav-links a { font-size: 2.5vw; }
+    footer a:hover {
+      color: white;
     }
 
-    @media (max-width: 768px) {
-      .hamburger { display: flex; }
-      .nav-links {
-        display: none;
-        position: absolute;
-        top: 60px;
-        right: 0;
-        background: #1a1a1a;
-        flex-direction: column;
-        width: 100%;
-        text-align: center;
-        padding: 2vh 0;
-      }
-      .nav-links.active { display: flex; }
-      .nav-links li { margin: 1vh 0; }
-      nav { flex-wrap: wrap; }
-    }
+    /* --- Media Query for screens >= 1400px --- */
+   
 
   </style>
 </head>
 <body>
+
+  <!-- Navbar -->
   <header>
     <nav>
       <h2 class="logo">Brady Merten</h2>
@@ -370,7 +361,7 @@
       <img src="w.png" alt="Brady Merten" class="profile-img">
       <div class="intro">
         <h1>Hello, I'm <span>Brady Merten</span></h1>
-        <p>Welcome to my portfolio! I’m a student passionate about mechanical engineering and the process of turning ideas into real designs. Here you can learn more about me, explore my projects, achievements, and goals as I continue to grow and expand my learning.</p>
+        <p>Welcome to my portfolio! I’m a student passionate about mechanical engineering and the process of turning ideas into real designs. Here you can learn more about me, explore my projects, achievements, and goals as I continue to grow and expand my learning</p>
         <a href="portfolio.html" class="btn">View My Work</a>
       </div>
     </div>
@@ -379,7 +370,7 @@
   <!-- About Preview -->
   <section class="about-preview">
     <h2>About Me</h2>
-    <p>Hello I am Brady Merten, I am passionate about web development, mechanical engineering, and robotics. Outside of school I enjoy playing sports and running cross country for my school.</p>
+    <p>Hello I am Brady Merten, I have a passionate about web development, mechancial engineering, and robotics. Outside of school I enjoy playing sports, running cross country for my school</p>
     <a href="about.html" class="btn">Learn More</a>
   </section>
 
@@ -392,43 +383,44 @@
         <p>I have experience using HTML, CSS, and JavaScript to create modern, responsive websites.</p>
       </div>
       <div class="skill-card">
-        <h3>Java Development</h3>
-        <p>I have experience creating GUI projects using Java for both personal and school projects.</p>
+        <h3>Java development</h3>
+        <p>I have experince as a JAVA developer creating GUI for both personal use, as well as school proojects</p>
       </div>
       <div class="skill-card">
         <h3>3D Printing & Prototyping</h3>
-        <p>Experienced in designing and printing 3D models to create functional projects for science fairs and personal use.</p>
+        <p>Experienced in designing and printing 3D models in order to create functional projcets for science fair, or personal projects.</p>
       </div>
     </div>
   </section>
 
-  <!-- Projects -->
+  <!-- Projects Preview -->
   <section class="projects-preview">
     <h2>Featured Projects</h2>
     <div class="project-grid">
       <div class="project">
-        <h3>Vegetarian Restaurant Website</h3>
-        <p>Developed a fully responsive vegetarian restaurant website for TSA regionals, states, and nationals.</p>
+        <h3>Vegetarian restaurant website</h3>
+        <p>In a team we developed a fully responsive website vegeatirain restuaurant to compete at TSA regionals,states, and nationals.</p>
       </div>
       <div class="project">
-        <h3>Long-Term Hearing Loss Study</h3>
-        <p>Created an experiment to determine if attending football games causes permanent hearing loss.</p>
+        <h3>Long term hearing loss study</h3>
+        <p>I created a expeiment to determine if going to a football game caused permanat hearing loss</p>
       </div>
       <div class="project">
-        <h3>Effects of Hosting Major Sports Events</h3>
-        <p>Conducted research on how hosting major sporting events impacts local communities.</p>
+        <h3>Effects of hosting major sports events</h3>
+        <p>I did in depth research on the effects that hosting a major sporting event has on the local community</p>
       </div>
     </div>
-    <a href="portfolio.html" class="btn" style="margin-top:2.5vh;">See All Projects</a>
+    <a href="portfolio.html" class="btn" style="margin-top:2.5rem;">See All Projects</a>
   </section>
 
   <!-- Call to Action -->
   <section class="cta">
-    <h2>Want to Reach Out?</h2>
-    <p>If you have any questions or want to connect, feel free to contact me anytime.</p>
+    <h2>Want to Reach out?</h2>
+    <p>If you have any questions, or want to connect feel free to contact me at anytime.</p>
     <a href="contact.html">Contact Me</a>
   </section>
 
+  <!-- Footer -->
   <footer>
     <p>&copy; 2025 Brady Merten — All Rights Reserved</p>
   </footer>
@@ -444,3 +436,4 @@
   </script>
 </body>
 </html>
+
